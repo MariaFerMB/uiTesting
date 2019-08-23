@@ -7,12 +7,12 @@ import pages.HomePage;
 
 public class CommonSteps {
 
-    private HomePage homePage;
+   // private HomePage homePage;
     private WebDriver driver;
 
     public CommonSteps(){
         driver =Hook.driver;
-        homePage =new HomePage(driver);
+        //homePage =new HomePage(driver);
     }
 
     @Given("I am in the Falabella homepage$")

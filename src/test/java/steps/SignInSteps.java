@@ -1,20 +1,19 @@
 package steps;
 
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import pages.HomePage;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 public class SignInSteps {
     private HomePage homePage;
-    private WebDriver driver;
+    private WebDriver driver = Hook.driver;
 
 
     public SignInSteps() {
-        driver =Hook.driver;
         homePage = new HomePage(driver);
     }
 
@@ -31,7 +30,7 @@ public class SignInSteps {
     @Then("I should be signed in$")
     public void beSignedIn(){
         assertThat(homePage.verifySingIn(), equalTo("Bienvenid@,"+"\n"+ "David"));
-    }
+    } //remplazar
 
     @Then("I should see a sign in error$")
     public void showErrorSignedIn(){

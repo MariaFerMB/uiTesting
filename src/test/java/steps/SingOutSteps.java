@@ -26,7 +26,7 @@ public class SingOutSteps {
 
     @Then("I should be signed out$")
     public void showSignedIn(){
-        assertThat(homePage.verifySingOut(), equalTo("Inicia sesión"));
+        assertThat(homePage.verifySingOut().split(" ")[0], equalTo("Inicia"));
     }
 
 

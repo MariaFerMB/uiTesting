@@ -35,20 +35,20 @@ public class HomePage extends BasePage{
     }
 
     public void signIn(String email, String password){
-        clickElemente(signInElemente);
+        clickElement(signInElemente);
         signInPopUp.singIn(email,password);
     }
 
 
     public String verifySingIn() {
-        WebDriverWait webDriverWait = new WebDriverWait(driver, 3);
+        WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
         webDriverWait.until(ExpectedConditions
                 .numberOfElementsToBeMoreThan(By.xpath("//*[@class='fb-masthead-login__name re-design-cl__name']"),0));
         return  getText(singInMessage);
     }
 
     public String verifySingOut() {
-        WebDriverWait webDriverWait = new WebDriverWait(driver, 3);
+        WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
         webDriverWait.until(ExpectedConditions
                 .numberOfElementsToBeMoreThan(By.xpath("//*[@class='fb-masthead-login__name re-design-cl__name login-redesing_logout-box']"),0));
         return  getText(singOutMessage);
@@ -62,11 +62,10 @@ public class HomePage extends BasePage{
     public void signOut(){
 
         //Repetido
-        WebDriverWait webDriverWait = new WebDriverWait(driver, 3);
-        webDriverWait.until(ExpectedConditions
-                .numberOfElementsToBeMoreThan(By.xpath("//*[@class='fb-masthead-login__name re-design-cl__name']"),0));
-        clickElemente(singInMessage);
-        clickElemente(signOutbutton);
+        WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
+        webDriverWait.until(ExpectedConditions.visibilityOf(singInMessage));
+        clickElement(singInMessage);
+        clickElement(signOutbutton);
     }
 
 

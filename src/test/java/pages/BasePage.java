@@ -13,7 +13,7 @@ public class BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    public void clickElemente(WebElement element){
+    public void clickElement(WebElement element){
         element.click();
     }
 

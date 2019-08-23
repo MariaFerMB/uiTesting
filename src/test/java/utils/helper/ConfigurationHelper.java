@@ -12,7 +12,7 @@ public class ConfigurationHelper {
         String respond =null;
 
         try {
-            InputStream fileInput = new FileInputStream("src/test/resources/configuration/configuration1.properties");
+            InputStream fileInput = new FileInputStream("src/test/resources/configuration/configuration1.properties"); //constante dinamico
             Properties prop = new Properties();
             prop.load(fileInput);
             respond = prop.getProperty("driven");
