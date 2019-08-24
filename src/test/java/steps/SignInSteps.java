@@ -9,9 +9,9 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 public class SignInSteps {
+
     private HomePage homePage;
     private WebDriver driver = Hook.driver;
-
 
     public SignInSteps() {
         homePage = new HomePage(driver);

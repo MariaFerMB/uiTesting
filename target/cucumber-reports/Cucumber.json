@@ -3,32 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "line": 3,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 46363743800,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "I am in the Falabella homepage",
-            "match": {
-              "location": "CommonSteps.stayInFalabellaHomePage()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2019-08-24T00:28:27.981Z",
+        "start_timestamp": "2019-08-24T00:32:12.407Z",
         "before": [
           {
             "result": {
-              "duration": 5803513400,
+              "duration": 6988144500,
               "status": "passed"
             },
             "match": {
@@ -36,14 +15,14 @@
             }
           }
         ],
-        "line": 6,
-        "name": "Succesful sign in",
+        "line": 3,
+        "name": "Succesful sign out",
         "description": "",
-        "id": "sign-in;succesful-sign-in",
+        "id": "sign-out;succesful-sign-out",
         "after": [
           {
             "result": {
-              "duration": 887250300,
+              "duration": 811853600,
               "status": "passed"
             },
             "match": {
@@ -56,114 +35,60 @@
         "steps": [
           {
             "result": {
-              "duration": 3816262100,
+              "duration": 46182532300,
               "status": "passed"
             },
-            "line": 7,
+            "line": 4,
+            "name": "I am in the Falabella homepage",
+            "match": {
+              "location": "CommonSteps.stayInFalabellaHomePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3859763900,
+              "status": "passed"
+            },
+            "line": 5,
             "name": "I sign in with valid credentials",
             "match": {
               "location": "SignInSteps.singInValid()"
             },
-            "keyword": "When "
+            "keyword": "And "
           },
           {
             "result": {
-              "duration": 1805639900,
+              "duration": 2734158800,
               "status": "passed"
             },
-            "line": 8,
-            "name": "I should be signed in",
+            "line": 6,
+            "name": "I sign out",
             "match": {
-              "location": "SignInSteps.beSignedIn()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "line": 3,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 45689631100,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "I am in the Falabella homepage",
-            "match": {
-              "location": "CommonSteps.stayInFalabellaHomePage()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2019-08-24T00:29:26.663Z",
-        "before": [
-          {
-            "result": {
-              "duration": 3021388600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hook.setup()"
-            }
-          }
-        ],
-        "line": 10,
-        "name": "Unsuccesful sign in",
-        "description": "",
-        "id": "sign-in;unsuccesful-sign-in",
-        "after": [
-          {
-            "result": {
-              "duration": 856063700,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hook.close()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 3561521700,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "I sign in with invalid credentials",
-            "match": {
-              "location": "SignInSteps.singInInvalid()"
+              "location": "SingOutSteps.singInValid()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 1710850000,
+              "duration": 44953274900,
               "status": "passed"
             },
-            "line": 12,
-            "name": "I should see a sign in error",
+            "line": 7,
+            "name": "I should be signed out",
             "match": {
-              "location": "SignInSteps.showErrorSignedIn()"
+              "location": "SingOutSteps.showSignedIn()"
             },
             "keyword": "Then "
           }
         ]
       }
     ],
-    "name": "Sign In",
+    "name": "Sign out",
     "description": "",
-    "id": "sign-in",
+    "id": "sign-out",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/signIn.feature",
+    "uri": "file:src/test/resources/features/signOut.feature",
     "tags": []
   }
 ]
