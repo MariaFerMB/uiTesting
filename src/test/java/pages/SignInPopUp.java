@@ -3,8 +3,6 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SignInPopUp extends BasePage {
 
@@ -34,9 +32,10 @@ public class SignInPopUp extends BasePage {
 
 
     public boolean seeErrorMessage(){
-        WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
-        webDriverWait.until(ExpectedConditions.visibilityOf(errorMessage)); //verificar el string
-              //  .numberOfElementsToBeMoreThan(By.xpath("//*[@class='Login__errorBlock__3q25u']"),0));
+        drivenHelper.waitVisible(errorMessage );
+//        WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
+//        webDriverWait.until(ExpectedConditions.visibilityOf(errorMessage)); //verificar el string
+//              //  .numberOfElementsToBeMoreThan(By.xpath("//*[@class='Login__errorBlock__3q25u']"),0));
         if(errorMessage !=null){
             return true;
         }

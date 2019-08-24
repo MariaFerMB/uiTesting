@@ -3,9 +3,8 @@ C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTes
 C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTests\src\test\java\steps\SingOutSteps.java
 C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTests\src\test\java\pages\HomePage.java
 C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTests\src\test\java\pages\BasePage.java
-C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTests\src\test\java\utils\helper\ConfigurationHelper.java
+C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTests\src\test\java\helper\DrivenHelper.java
 C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTests\src\test\java\steps\SignInSteps.java
-C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTests\src\test\java\utils\helper\DrivenHelper.java
 C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTests\src\test\java\pages\SignInPopUp.java
-C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTests\src\test\java\utils\example.java
 C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTests\src\test\java\runner\Runner.java
+C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTests\src\test\java\utils\Configuration.java

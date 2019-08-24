@@ -4,7 +4,7 @@ package steps;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import org.openqa.selenium.WebDriver;
-import utils.helper.DrivenHelper;
+import utils.Configuration;
 
 public class Hook {
 
@@ -12,9 +12,8 @@ public class Hook {
 
     @Before
     public void setup(){
-        driver = DrivenHelper.getDriver();
+        driver = Configuration.getDriver();
     }
-
     @After
     public void close(){
         driver.quit();

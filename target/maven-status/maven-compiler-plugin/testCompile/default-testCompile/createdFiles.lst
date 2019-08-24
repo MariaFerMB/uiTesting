@@ -2,10 +2,9 @@ runner\Runner.class
 pages\BasePage.class
 steps\CommonSteps.class
 pages\HomePage.class
-utils\example.class
 steps\SingOutSteps.class
-utils\helper\DrivenHelper.class
-utils\helper\ConfigurationHelper.class
+helper\DrivenHelper.class
 pages\SignInPopUp.class
 steps\SignInSteps.class
 steps\Hook.class
+utils\Configuration.class

@@ -29,6 +29,7 @@ public class HomePage extends BasePage{
 
     private SignInPopUp signInPopUp;
 
+    //By ajiaco=By.xpath()
     public HomePage(WebDriver driver) {
         super(driver);
         signInPopUp =new SignInPopUp(driver);
@@ -41,16 +42,19 @@ public class HomePage extends BasePage{
 
 
     public String verifySingIn() {
-        WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
-        webDriverWait.until(ExpectedConditions
-                .numberOfElementsToBeMoreThan(By.xpath("//*[@class='fb-masthead-login__name re-design-cl__name']"),0));
+        drivenHelper.waitVisible(singInMessage);
+//        WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
+//        webDriverWait.until(ExpectedConditions
+//                .numberOfElementsToBeMoreThan(By.xpath("//*[@class='fb-masthead-login__name re-design-cl__name']"),0));
         return  getText(singInMessage);
     }
 
     public String verifySingOut() {
-        WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
-        webDriverWait.until(ExpectedConditions
-                .numberOfElementsToBeMoreThan(By.xpath("//*[@class='fb-masthead-login__name re-design-cl__name login-redesing_logout-box']"),0));
+        drivenHelper.waitVisible(singOutMessage);
+
+//        WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
+//        webDriverWait.until(ExpectedConditions
+//                .numberOfElementsToBeMoreThan(By.xpath("//*[@class='fb-masthead-login__name re-design-cl__name login-redesing_logout-box']"),0));
         return  getText(singOutMessage);
     }
 
@@ -60,10 +64,11 @@ public class HomePage extends BasePage{
     }
 
     public void signOut(){
+        drivenHelper.waitVisible(singInMessage);
 
         //Repetido
-        WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
-        webDriverWait.until(ExpectedConditions.visibilityOf(singInMessage));
+//        WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
+//        webDriverWait.until(ExpectedConditions.visibilityOf(singInMessage));
         clickElement(singInMessage);
         clickElement(signOutbutton);
     }

@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         glue = "steps",
         plugin = { "pretty", "json:target/cucumber-reports/Cucumber.json" },
-        features ="src/test/resources/features"
+        features ="src/test/resources/features/signIn.feature"
 )
 public class Runner {
 

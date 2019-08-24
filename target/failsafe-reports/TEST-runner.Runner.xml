@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-failsafe-plugin/xsd/failsafe-test-report.xsd" name="runner.Runner" time="285.766" tests="17" errors="0" skipped="14" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-failsafe-plugin/xsd/failsafe-test-report.xsd" name="runner.Runner" time="114.436" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="CO"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_221\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\mmena\AppData\Local\Temp\surefire3824870661052057690\surefirebooter7997485974435139133.jar C:\Users\mmena\AppData\Local\Temp\surefire3824870661052057690 2019-08-23T17-51-08_798-jvmRun1 surefire7865073205532116522tmp surefire_05334220748807319791tmp"/>
+    <property name="sun.java.command" value="C:\Users\mmena\AppData\Local\Temp\surefire7966198068096118845\surefirebooter1752777262677515111.jar C:\Users\mmena\AppData\Local\Temp\surefire7966198068096118845 2019-08-23T19-28-24_583-jvmRun1 surefire3305160075416654255tmp surefire_05184078780666207500tmp"/>
     <property name="surefire.test.class.path" value="C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTests\target\test-classes;C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTests\target\falabellaTests-1.0-.jar;C:\Users\mmena\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\mmena\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\mmena\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\mmena\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\mmena\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\mmena\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\mmena\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\mmena\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\mmena\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\mmena\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\mmena\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\mmena\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\mmena\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\mmena\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\mmena\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\mmena\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\mmena\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\mmena\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\mmena\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\mmena\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\mmena\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\mmena\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\mmena\.m2\repository\io\cucumber\cucumber-junit\4.3.1\cucumber-junit-4.3.1.jar;C:\Users\mmena\.m2\repository\io\cucumber\cucumber-core\4.3.1\cucumber-core-4.3.1.jar;C:\Users\mmena\.m2\repository\io\cucumber\cucumber-html\0.2.7\cucumber-html-0.2.7.jar;C:\Users\mmena\.m2\repository\io\cucumber\gherkin\5.1.0\gherkin-5.1.0.jar;C:\Users\mmena\.m2\repository\io\cucumber\tag-expressions\1.1.1\tag-expressions-1.1.1.jar;C:\Users\mmena\.m2\repository\io\cucumber\cucumber-expressions\6.2.2\cucumber-expressions-6.2.2.jar;C:\Users\mmena\.m2\repository\io\cucumber\datatable\1.1.12\datatable-1.1.12.jar;C:\Users\mmena\.m2\repository\io\cucumber\datatable-dependencies\1.1.12\datatable-dependencies-1.1.12.jar;C:\Users\mmena\.m2\repository\io\cucumber\cucumber-java\4.3.1\cucumber-java-4.3.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\mmena"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\mmena\AppData\Local\Temp\surefire3824870661052057690\surefirebooter7997485974435139133.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\mmena\AppData\Local\Temp\surefire7966198068096118845\surefirebooter1752777262677515111.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_221\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_221\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -60,73 +60,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="Filter the price" classname="Filter" time="0">
-    <skipped message="The step &quot;I&apos;m in the Falabella homepage&quot; is undefined"/>
-    <system-err><![CDATA[Starting ChromeDriver 76.0.3809.126 (d80a294506b4c9d18015e755cee48f953ddc3f2f-refs/branch-heads/3809@{#1024}) on port 5649
-Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-ago 23, 2019 5:51:17 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFORMACIÓN: Detected dialect: W3C
-]]></system-err>
-  </testcase>
-  <testcase name="Filter the price" classname="Filter" time="0">
-    <skipped message="The step &quot;I search for &quot;cremas&quot;&quot; is undefined"/>
-  </testcase>
-  <testcase name="Filter the price" classname="Filter" time="0">
-    <skipped message="The step &quot;I aply the filter for price between 5000 and 20000&quot; is undefined"/>
-  </testcase>
-  <testcase name="Filter the price" classname="Filter" time="0">
-    <skipped message="The step &quot;I should see just products with prices in this range&quot; is undefined"/>
-  </testcase>
-  <testcase name="Invalid registration" classname="Register" time="0">
-    <skipped message="The step &quot;I try to register&quot; is undefined"/>
-    <system-err><![CDATA[Starting ChromeDriver 76.0.3809.126 (d80a294506b4c9d18015e755cee48f953ddc3f2f-refs/branch-heads/3809@{#1024}) on port 12360
-Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-ago 23, 2019 5:51:22 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFORMACIÓN: Detected dialect: W3C
-]]></system-err>
-  </testcase>
-  <testcase name="Invalid registration" classname="Register" time="0">
-    <skipped message="The step &quot;I fill all the field except for &quot;celular&quot;&quot; is undefined"/>
-  </testcase>
-  <testcase name="Invalid registration" classname="Register" time="0">
-    <skipped message="The step &quot;I try to save my data&quot; is undefined"/>
-  </testcase>
-  <testcase name="Invalid registration" classname="Register" time="0">
-    <skipped message="The step &quot;I should see a error message&quot; is undefined"/>
-  </testcase>
-  <testcase name="Add a product to the shopping cart" classname="Shopping cart" time="0">
-    <skipped message="The step &quot;I am in a product page&quot; is undefined"/>
-    <system-err><![CDATA[Starting ChromeDriver 76.0.3809.126 (d80a294506b4c9d18015e755cee48f953ddc3f2f-refs/branch-heads/3809@{#1024}) on port 21969
-Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-ago 23, 2019 5:52:12 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFORMACIÓN: Detected dialect: W3C
-]]></system-err>
-  </testcase>
-  <testcase name="Add a product to the shopping cart" classname="Shopping cart" time="0">
-    <skipped message="The step &quot;I add the product to the cart&quot; is undefined"/>
-  </testcase>
-  <testcase name="Add a product to the shopping cart" classname="Shopping cart" time="0">
-    <skipped message="The step &quot;I should see a pop up with the confirmation&quot; is undefined"/>
-  </testcase>
-  <testcase name="Delete a product from the shopping cart" classname="Shopping cart" time="0">
-    <skipped message="The step &quot;I have a product in my shopping cart&quot; is undefined"/>
-    <system-err><![CDATA[Starting ChromeDriver 76.0.3809.126 (d80a294506b4c9d18015e755cee48f953ddc3f2f-refs/branch-heads/3809@{#1024}) on port 9513
-Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-ago 23, 2019 5:52:16 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFORMACIÓN: Detected dialect: W3C
-]]></system-err>
-  </testcase>
-  <testcase name="Delete a product from the shopping cart" classname="Shopping cart" time="0">
-    <skipped message="The step &quot;I delete the product&quot; is undefined"/>
-  </testcase>
-  <testcase name="Delete a product from the shopping cart" classname="Shopping cart" time="0">
-    <skipped message="The step &quot;I should see a message saying that my cart is empty&quot; is undefined"/>
-  </testcase>
-  <testcase name="Succesful sign in" classname="Sign In" time="58.293"/>
-  <testcase name="Unsuccesful sign in" classname="Sign In" time="55.912"/>
-  <testcase name="Succesful sign out" classname="Sign out" time="103.601"/>
+  <testcase name="Succesful sign in" classname="Sign In" time="58.684"/>
+  <testcase name="Unsuccesful sign in" classname="Sign In" time="54.831"/>
 </testsuite>
