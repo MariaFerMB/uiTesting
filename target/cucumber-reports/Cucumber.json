@@ -3,11 +3,133 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2019-08-25T03:39:36.587Z",
+        "start_timestamp": "2019-08-25T08:09:47.873Z",
         "before": [
           {
             "result": {
-              "duration": 3694711405,
+              "duration": 3762844095,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Filter the price",
+        "description": "",
+        "id": "filter;filter-the-price",
+        "after": [
+          {
+            "result": {
+              "duration": 1183451359,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.close()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9417321172,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am in the Falabella homepage",
+            "match": {
+              "location": "CommonSteps.stayInFalabellaHomePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 10192257315,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I search for \"cremas\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"cremas\"",
+                  "offset": 13
+                }
+              ],
+              "location": "FilterSteps.iSearchFor(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12025352331,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I apply the filter for \"Precio\" between \"5.000\" and \"20.000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Precio\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"5.000\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"20.000\"",
+                  "offset": 52
+                }
+              ],
+              "location": "FilterSteps.iApplyTheFilterForPriceBetweenAnd(String,String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 65250988,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I should see just products with prices between 5000 and 20000",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5000",
+                  "offset": 47
+                },
+                {
+                  "val": "20000",
+                  "offset": 56
+                }
+              ],
+              "location": "FilterSteps.iShouldSeeJustProductsWithPricesInThisRange(int,int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Filter",
+    "description": "",
+    "id": "filter",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/filter.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2019-08-25T08:10:24.524Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2128174941,
               "status": "passed"
             },
             "match": {
@@ -22,7 +144,7 @@
         "after": [
           {
             "result": {
-              "duration": 1149007999,
+              "duration": 817955887,
               "status": "passed"
             },
             "match": {
@@ -35,7 +157,7 @@
         "steps": [
           {
             "result": {
-              "duration": 23728873844,
+              "duration": 13363358361,
               "status": "passed"
             },
             "line": 4,
@@ -47,7 +169,7 @@
           },
           {
             "result": {
-              "duration": 12566733939,
+              "duration": 7138122702,
               "status": "passed"
             },
             "line": 5,
@@ -59,7 +181,7 @@
           },
           {
             "result": {
-              "duration": 1747201650,
+              "duration": 1904390328,
               "status": "passed"
             },
             "line": 6,
@@ -77,7 +199,7 @@
           },
           {
             "result": {
-              "duration": 85811810,
+              "duration": 93357775,
               "status": "passed"
             },
             "line": 7,
@@ -89,7 +211,7 @@
           },
           {
             "result": {
-              "duration": 131639251,
+              "duration": 125016849,
               "status": "passed"
             },
             "line": 8,
@@ -107,6 +229,414 @@
     "id": "register",
     "keyword": "Feature",
     "uri": "file:src/test/resources/features/register.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2019-08-25T08:10:50.096Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2212490773,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Add a product to the shopping cart",
+        "description": "",
+        "id": "shopping-cart;add-a-product-to-the-shopping-cart",
+        "after": [
+          {
+            "result": {
+              "duration": 850749216,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.close()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 11205458318,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am in a product page",
+            "match": {
+              "location": "ShoppingCartSteps.iAmInAProductPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 12117035910,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I add the product to the cart",
+            "match": {
+              "location": "ShoppingCartSteps.iAddTheProductToTheCart()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 54739119,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I should see a pop up with the confirmation",
+            "match": {
+              "location": "ShoppingCartSteps.iShouldSeeAPopUpWithTheConfirmation()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2019-08-25T08:11:16.540Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2301026077,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "Delete a product from the shopping cart",
+        "description": "",
+        "id": "shopping-cart;delete-a-product-from-the-shopping-cart",
+        "after": [
+          {
+            "result": {
+              "duration": 1317088017,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.close()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 39173641792,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I have a product in my shopping cart",
+            "match": {
+              "location": "ShoppingCartSteps.iHaveAProductInMyShoppingCart()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1384868422,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I delete the product",
+            "match": {
+              "location": "ShoppingCartSteps.iDeleteTheProduct()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 69561458,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I should see a message saying that my cart is empty",
+            "match": {
+              "location": "ShoppingCartSteps.iShouldSeeAMessageSayingThatMyCartIsEmpty()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Shopping cart",
+    "description": "",
+    "id": "shopping-cart",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/shoppingCart.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 7498512895,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am in the Falabella homepage",
+            "match": {
+              "location": "CommonSteps.stayInFalabellaHomePage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2019-08-25T08:12:00.787Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2332673446,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Succesful sign in",
+        "description": "",
+        "id": "sign-in;succesful-sign-in",
+        "after": [
+          {
+            "result": {
+              "duration": 755818059,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.close()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3981657847,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I sign in with valid credentials",
+            "match": {
+              "location": "SignInSteps.singInWithValidCredentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3311174712,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I should be signed in",
+            "match": {
+              "location": "SignInSteps.shouldBeSignedIn()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 13243142460,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am in the Falabella homepage",
+            "match": {
+              "location": "CommonSteps.stayInFalabellaHomePage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2019-08-25T08:12:18.668Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2383571430,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "Unsuccesful sign in",
+        "description": "",
+        "id": "sign-in;unsuccesful-sign-in",
+        "after": [
+          {
+            "result": {
+              "duration": 722893331,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.close()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1069090614,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I sign in with invalid credentials",
+            "match": {
+              "location": "SignInSteps.singInWithInvalidCredentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2760838382,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I should see a sign in error",
+            "match": {
+              "location": "SignInSteps.shouldSeeSignedInError()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Sign In",
+    "description": "",
+    "id": "sign-in",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/signIn.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2019-08-25T08:12:38.849Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2167284076,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Succesful sign out",
+        "description": "",
+        "id": "sign-out;succesful-sign-out",
+        "after": [
+          {
+            "result": {
+              "duration": 741000629,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.close()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 20051133594,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am in the Falabella homepage",
+            "match": {
+              "location": "CommonSteps.stayInFalabellaHomePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1052571802,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I sign in with valid credentials",
+            "match": {
+              "location": "SignInSteps.singInWithValidCredentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3037229156,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I sign out",
+            "match": {
+              "location": "SingOutSteps.singInValid()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7023573544,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I should be signed out",
+            "match": {
+              "location": "SingOutSteps.showSignedIn()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Sign out",
+    "description": "",
+    "id": "sign-out",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/signOut.feature",
     "tags": []
   }
 ]

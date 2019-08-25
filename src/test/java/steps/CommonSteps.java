@@ -1,24 +1,23 @@
 package steps;
 
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.When;
-import org.openqa.selenium.WebDriver;
-import pages.HomePage;
+import helper.DrivenHelper;
 
 
 public class CommonSteps {
 
-    private WebDriver driver;
+    private DrivenHelper drivenHelper;
 
-    public CommonSteps(){
-        driver =Hook.driver;
+    public CommonSteps() {
+        drivenHelper = new DrivenHelper(Hook.driver);
+
     }
 
     @Given("I am in the Falabella homepage$")
     public void stayInFalabellaHomePage(){
-        Hook.driver.get("https://www.falabella.com.co/falabella-co/");
-    }
+        drivenHelper.openPage("https://www.falabella.com.co/falabella-co/");
 
+    }
 
 
 }

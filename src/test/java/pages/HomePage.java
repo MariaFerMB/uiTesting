@@ -24,6 +24,12 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//*[@class='fb-masthead-login__name re-design-cl__name login-redesing_logout-box']")
     private WebElement singOutMessage;
 
+    @FindBy(xpath = "//*[@class='fb-masthead-search__box__input']")
+    private WebElement searchBar;
+
+    @FindBy(xpath = "//*[@id='search-bar']//*[@class='icon-search fb-masthead__util-bar__icon']")
+    private WebElement searchIcon;
+
     private SignInPopUp signInPopUp;
 
     //By ajiaco=By.xpath()
@@ -65,6 +71,11 @@ public class HomePage extends BasePage{
         drivenHelper.waitVisible(singInMessage);
         clickElement(singInMessage);
         clickElement(signOutbutton);
+    }
+
+    public  void  search(String search){
+        searchBar.sendKeys(search);
+        clickElement(searchIcon);
     }
 
 

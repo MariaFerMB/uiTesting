@@ -11,8 +11,10 @@ import java.util.Properties;
 
 public class Configuration {
 
-    private static String configurationPath = "src/test/resources/configuration/configuration1.properties";
+    private static String configurationPath = "src/test/resources/data/configuration1.properties";
     public static String error;
+    public  static String empty;
+    public static String signInMessage;
 
     public static String readConfiguration(){
         String respond =null;
@@ -21,6 +23,8 @@ public class Configuration {
             Properties prop = new Properties();
             prop.load(fileInput);
             error = prop.getProperty("error");
+            empty =prop.getProperty("empty");
+            signInMessage=prop.getProperty("singIn");
             respond = prop.getProperty("driven");
         } catch (IOException e) {
             e.printStackTrace();
