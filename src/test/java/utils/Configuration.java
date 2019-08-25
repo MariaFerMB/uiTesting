@@ -12,7 +12,7 @@ import java.util.Properties;
 public class Configuration {
 
     private static String configurationPath = "src/test/resources/configuration/configuration1.properties";
-    private  WebDriver driver;
+    public static String error;
 
     public static String readConfiguration(){
         String respond =null;
@@ -20,6 +20,7 @@ public class Configuration {
             InputStream fileInput = new FileInputStream(configurationPath); //dinamico
             Properties prop = new Properties();
             prop.load(fileInput);
+            error = prop.getProperty("error");
             respond = prop.getProperty("driven");
         } catch (IOException e) {
             e.printStackTrace();
@@ -28,7 +29,6 @@ public class Configuration {
     }
 
     public static WebDriver getDriver(){
-        //if (driver==null){
             String driverName= readConfiguration();
             WebDriver driver =null;
 
@@ -37,7 +37,6 @@ public class Configuration {
                 options.addArguments("--start-maximized");
                 driver = new ChromeDriver(options);
             }
-        //}
         return driver;
     }
 

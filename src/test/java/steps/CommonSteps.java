@@ -1,6 +1,7 @@
 package steps;
 
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import pages.HomePage;
 
@@ -17,6 +18,7 @@ public class CommonSteps {
     public void stayInFalabellaHomePage(){
         Hook.driver.get("https://www.falabella.com.co/falabella-co/");
     }
+
 
 
 }

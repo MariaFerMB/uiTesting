@@ -18,7 +18,6 @@ public class DrivenHelper {
     public void waitVisible(WebElement webElement){
         WebDriverWait webDriverWait = new WebDriverWait(driver, WAIT_TIME);
         webDriverWait.until(ExpectedConditions.visibilityOf(webElement));
-
     }
 
 

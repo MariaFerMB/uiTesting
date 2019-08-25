@@ -1,11 +1,8 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage extends BasePage{
 
@@ -36,39 +33,36 @@ public class HomePage extends BasePage{
     }
 
     public void signIn(String email, String password){
-        clickElement(signInElemente);
+        openSingInPopUp();
         signInPopUp.singIn(email,password);
+    }
+    private void openSingInPopUp(){
+        clickElement(signInElemente);
+    }
+
+    public void openRegister(){
+        openSingInPopUp();
+        signInPopUp.openRegister();
     }
 
 
     public String verifySingIn() {
         drivenHelper.waitVisible(singInMessage);
-//        WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
-//        webDriverWait.until(ExpectedConditions
-//                .numberOfElementsToBeMoreThan(By.xpath("//*[@class='fb-masthead-login__name re-design-cl__name']"),0));
         return  getText(singInMessage);
     }
 
     public String verifySingOut() {
         drivenHelper.waitVisible(singOutMessage);
-
-//        WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
-//        webDriverWait.until(ExpectedConditions
-//                .numberOfElementsToBeMoreThan(By.xpath("//*[@class='fb-masthead-login__name re-design-cl__name login-redesing_logout-box']"),0));
         return  getText(singOutMessage);
     }
 
 
-    public boolean verifyNotSignIn(){
-        return signInPopUp.seeErrorMessage();
+    public String  verifyNotSignIn(){
+        return signInPopUp.getErrorMessage();
     }
 
     public void signOut(){
         drivenHelper.waitVisible(singInMessage);
-
-        //Repetido
-//        WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
-//        webDriverWait.until(ExpectedConditions.visibilityOf(singInMessage));
         clickElement(singInMessage);
         clickElement(signOutbutton);
     }

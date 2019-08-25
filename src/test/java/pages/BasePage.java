@@ -9,7 +9,7 @@ public class BasePage {
 
     protected DrivenHelper drivenHelper;
 
-    public BasePage(WebDriver driver){
+    BasePage(WebDriver driver){
         drivenHelper = new DrivenHelper(driver);
         PageFactory.initElements(driver, this);
     }

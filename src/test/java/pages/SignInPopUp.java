@@ -12,10 +12,13 @@ public class SignInPopUp extends BasePage {
     @FindBy(name = "password")
     private WebElement passwordCamp;
 
+    @FindBy(xpath = "//*[@href='/falabella-co/myaccount/register.jsp']")
+    private WebElement registerLink;
+
     @FindBy(xpath = "//*[@class='Button__main__1NDc9 Button__green__1fhy5']")
     private WebElement signInButton;
 
-    @FindBy(xpath = "//*[@class='Login__errorBlock__3q25u']")
+    @FindBy(xpath = "//*[@class='Login__errorText__13IML']")
     private  WebElement errorMessage;
 
 
@@ -30,23 +33,11 @@ public class SignInPopUp extends BasePage {
         clickElement(signInButton);//bilder
     }
 
-
-    public boolean seeErrorMessage(){
+    public String getErrorMessage(){
         drivenHelper.waitVisible(errorMessage );
-//        WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
-//        webDriverWait.until(ExpectedConditions.visibilityOf(errorMessage)); //verificar el string
-//              //  .numberOfElementsToBeMoreThan(By.xpath("//*[@class='Login__errorBlock__3q25u']"),0));
-        if(errorMessage !=null){
-            return true;
-        }
-        else {
-            return false;
-        }
-
+        return errorMessage.getText();
     }
-
-
-
-
-
+    public void openRegister(){
+        clickElement(registerLink);
+    }
 }

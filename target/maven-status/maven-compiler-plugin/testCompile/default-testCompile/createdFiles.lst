@@ -1,10 +1,13 @@
 runner\Runner.class
 pages\BasePage.class
+helper\RegisterHelper.class
 steps\CommonSteps.class
 pages\HomePage.class
+pages\RegisterPage.class
 steps\SingOutSteps.class
 helper\DrivenHelper.class
 pages\SignInPopUp.class
 steps\SignInSteps.class
 steps\Hook.class
 utils\Configuration.class
+steps\RegisterSteps.class

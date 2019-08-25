@@ -1,10 +1,13 @@
-C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTests\src\test\java\steps\CommonSteps.java
-C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTests\src\test\java\steps\Hook.java
-C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTests\src\test\java\steps\SingOutSteps.java
-C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTests\src\test\java\pages\HomePage.java
-C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTests\src\test\java\pages\BasePage.java
-C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTests\src\test\java\helper\DrivenHelper.java
-C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTests\src\test\java\steps\SignInSteps.java
-C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTests\src\test\java\pages\SignInPopUp.java
-C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTests\src\test\java\runner\Runner.java
-C:\Users\mmena\OneDrive - ENDAVA\Documents\Challenges\UI\challenge\fallabellaTests\src\test\java\utils\Configuration.java
+C:\Users\MARIA\Documents\Trabajo\Endava\Challenges\UI\uiTesting\src\test\java\pages\HomePage.java
+C:\Users\MARIA\Documents\Trabajo\Endava\Challenges\UI\uiTesting\src\test\java\helper\RegisterHelper.java
+C:\Users\MARIA\Documents\Trabajo\Endava\Challenges\UI\uiTesting\src\test\java\pages\BasePage.java
+C:\Users\MARIA\Documents\Trabajo\Endava\Challenges\UI\uiTesting\src\test\java\utils\Configuration.java
+C:\Users\MARIA\Documents\Trabajo\Endava\Challenges\UI\uiTesting\src\test\java\steps\CommonSteps.java
+C:\Users\MARIA\Documents\Trabajo\Endava\Challenges\UI\uiTesting\src\test\java\pages\RegisterPage.java
+C:\Users\MARIA\Documents\Trabajo\Endava\Challenges\UI\uiTesting\src\test\java\steps\RegisterSteps.java
+C:\Users\MARIA\Documents\Trabajo\Endava\Challenges\UI\uiTesting\src\test\java\helper\DrivenHelper.java
+C:\Users\MARIA\Documents\Trabajo\Endava\Challenges\UI\uiTesting\src\test\java\steps\Hook.java
+C:\Users\MARIA\Documents\Trabajo\Endava\Challenges\UI\uiTesting\src\test\java\steps\SingOutSteps.java
+C:\Users\MARIA\Documents\Trabajo\Endava\Challenges\UI\uiTesting\src\test\java\pages\SignInPopUp.java
+C:\Users\MARIA\Documents\Trabajo\Endava\Challenges\UI\uiTesting\src\test\java\runner\Runner.java
+C:\Users\MARIA\Documents\Trabajo\Endava\Challenges\UI\uiTesting\src\test\java\steps\SignInSteps.java

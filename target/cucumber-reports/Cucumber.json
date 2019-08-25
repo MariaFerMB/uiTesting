@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2019-08-24T00:32:12.407Z",
+        "start_timestamp": "2019-08-25T03:39:36.587Z",
         "before": [
           {
             "result": {
-              "duration": 6988144500,
+              "duration": 3694711405,
               "status": "passed"
             },
             "match": {
@@ -16,13 +16,13 @@
           }
         ],
         "line": 3,
-        "name": "Succesful sign out",
+        "name": "Invalid registration",
         "description": "",
-        "id": "sign-out;succesful-sign-out",
+        "id": "register;invalid-registration",
         "after": [
           {
             "result": {
-              "duration": 811853600,
+              "duration": 1149007999,
               "status": "passed"
             },
             "match": {
@@ -35,7 +35,7 @@
         "steps": [
           {
             "result": {
-              "duration": 46182532300,
+              "duration": 23728873844,
               "status": "passed"
             },
             "line": 4,
@@ -47,48 +47,66 @@
           },
           {
             "result": {
-              "duration": 3859763900,
+              "duration": 12566733939,
               "status": "passed"
             },
             "line": 5,
-            "name": "I sign in with valid credentials",
+            "name": "I try to register",
             "match": {
-              "location": "SignInSteps.singInValid()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 2734158800,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "I sign out",
-            "match": {
-              "location": "SingOutSteps.singInValid()"
+              "location": "RegisterSteps.iTryToRegister()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 44953274900,
+              "duration": 1747201650,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I fill all the field except for \"celular\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"celular\"",
+                  "offset": 32
+                }
+              ],
+              "location": "RegisterSteps.iFillAllTheFieldExceptFor(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 85811810,
               "status": "passed"
             },
             "line": 7,
-            "name": "I should be signed out",
+            "name": "I try to save my data",
             "match": {
-              "location": "SingOutSteps.showSignedIn()"
+              "location": "RegisterSteps.iTryToSaveMyData()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 131639251,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I should see a error message",
+            "match": {
+              "location": "RegisterSteps.iShouldSeeAErrorMessage()"
             },
             "keyword": "Then "
           }
         ]
       }
     ],
-    "name": "Sign out",
+    "name": "Register",
     "description": "",
-    "id": "sign-out",
+    "id": "register",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/signOut.feature",
+    "uri": "file:src/test/resources/features/register.feature",
     "tags": []
   }
 ]
