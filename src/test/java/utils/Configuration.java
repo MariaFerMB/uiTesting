@@ -11,12 +11,11 @@ import java.util.Properties;
 
 public class Configuration {
 
-    public  static String empty;
 
     public static Properties readConfiguration(String filePath){
          Properties prop = new Properties();
         try {
-            InputStream fileInput = new FileInputStream(filePath); //dinamico
+            InputStream fileInput = new FileInputStream(filePath);
             prop = new Properties();
             prop.load(fileInput);
         } catch (IOException e) {

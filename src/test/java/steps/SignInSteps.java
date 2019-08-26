@@ -1,12 +1,8 @@
 package steps;
 
-import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import helper.SignInHelper;
-import org.openqa.selenium.WebDriver;
 import pages.HomePage;
-import utils.Configuration;
 import utils.VerifyMessage;
 
 import static org.hamcrest.MatcherAssert.assertThat;

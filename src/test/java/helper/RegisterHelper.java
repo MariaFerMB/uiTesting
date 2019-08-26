@@ -1,15 +1,9 @@
 package helper;
 
 import utils.Configuration;
-
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.Properties;
 
 public class RegisterHelper {
-
-    //private static String registerDataFile = "src/test/resources/data/registerData.properties";
 
     private String userName;
     private  String fatherLastName;

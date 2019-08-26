@@ -7,7 +7,6 @@ import helper.DrivenHelper;
 import pages.ProductPage;
 import pages.ProductsPage;
 import pages.ShoppingCartPage;
-import utils.Configuration;
 import utils.VerifyMessage;
 
 import static org.hamcrest.MatcherAssert.assertThat;

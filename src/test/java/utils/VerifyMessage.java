@@ -9,6 +9,4 @@ public class VerifyMessage {
         Properties prop = Configuration.readConfiguration(dataFilePath);
         return  prop.getProperty("message");
     }
-
-
 }

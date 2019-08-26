@@ -16,7 +16,6 @@ public class ConfirmationProductPopUp extends BasePage {
     }
 
     public String getConfirmationTitle(){
-        //drivenHelper.waitVisible(confirmationTitle);
         return confirmationTitle.getText();
     }
 }
