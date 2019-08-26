@@ -4,17 +4,17 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import pages.HomePage;
-import utils.Configuration;
+import utils.VerifyMessage;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
-public class SingOutSteps {
+public class SignOutSteps {
 
     private HomePage homePage;
     private WebDriver driver;
 
-    public SingOutSteps() {
+    public SignOutSteps() {
         driver =Hook.driver;
         homePage = new HomePage(driver);
     }
@@ -27,7 +27,8 @@ public class SingOutSteps {
 
     @Then("I should be signed out$")
     public void showSignedIn(){
-        assertThat(homePage.verifySingOut(), equalTo(Configuration.signInMessage));
+        String filePath ="src/test/resources/data/verifyMessage/signOutMessage.properties";
+        assertThat(homePage.verifySingOut(), equalTo(VerifyMessage.getVerifyMessage(filePath)));
     }
 
 

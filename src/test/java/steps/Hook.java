@@ -12,7 +12,7 @@ public class Hook {
 
     @Before
     public void setup(){
-        driver = Configuration.getDriver();
+        driver = Configuration.getDriver("src/test/resources/data/driver.properties");
     }
     @After
     public void close(){

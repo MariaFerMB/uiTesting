@@ -11,31 +11,23 @@ import java.util.Properties;
 
 public class Configuration {
 
-    private static String configurationPath = "src/test/resources/data/configuration1.properties";
-    public static String error;
     public  static String empty;
-    public static String signInMessage;
 
-    public static String readConfiguration(){
-        String respond =null;
+    public static Properties readConfiguration(String filePath){
+         Properties prop = new Properties();
         try {
-            InputStream fileInput = new FileInputStream(configurationPath); //dinamico
-            Properties prop = new Properties();
+            InputStream fileInput = new FileInputStream(filePath); //dinamico
+            prop = new Properties();
             prop.load(fileInput);
-            error = prop.getProperty("error");
-            empty =prop.getProperty("empty");
-            signInMessage=prop.getProperty("singIn");
-            respond = prop.getProperty("driven");
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return respond;
+        return prop;
     }
-
-    public static WebDriver getDriver(){
-            String driverName= readConfiguration();
+    public static WebDriver getDriver(String filePath){
+        Properties prop = readConfiguration(filePath);
+            String driverName= prop.getProperty("driven");;
             WebDriver driver =null;
-
             if (driverName.equals("Chrome")) {//enum
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--start-maximized");

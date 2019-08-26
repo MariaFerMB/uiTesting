@@ -64,9 +64,9 @@ public class RegisterPage extends BasePage {
     private WebElement voidCellphoneMenssage;
 
 
-    public RegisterPage(WebDriver driver) {
+    public RegisterPage(WebDriver driver, String dataFilePath) {
         super(driver);
-        registerHelper =new RegisterHelper(); //puedo pasar la ruta
+        registerHelper =new RegisterHelper(dataFilePath); //puedo pasar la ruta
     }
 
 

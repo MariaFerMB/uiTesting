@@ -3,6 +3,9 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utils.Configuration;
+
+import java.util.Properties;
 
 public class HomePage extends BasePage{
 
@@ -32,15 +35,16 @@ public class HomePage extends BasePage{
 
     private SignInPopUp signInPopUp;
 
-    //By ajiaco=By.xpath()
     public HomePage(WebDriver driver) {
         super(driver);
         signInPopUp =new SignInPopUp(driver);
     }
 
-    public void signIn(String email, String password){
+    public void signIn(String filePath){
+       // Properties prop = Configuration.readConfiguration(filePath);
         openSingInPopUp();
-        signInPopUp.singIn(email,password);
+        signInPopUp.signIn(filePath);
+       // signInPopUp.signIn(prop.getProperty("email"),prop.getProperty("password"));
     }
     private void openSingInPopUp(){
         clickElement(signInElemente);
@@ -77,6 +81,5 @@ public class HomePage extends BasePage{
         searchBar.sendKeys(search);
         clickElement(searchIcon);
     }
-
 
 }

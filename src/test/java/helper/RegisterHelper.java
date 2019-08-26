@@ -1,5 +1,7 @@
 package helper;
 
+import utils.Configuration;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,7 +9,7 @@ import java.util.Properties;
 
 public class RegisterHelper {
 
-    private static String registerDataFile = "src/test/resources/data/registerData.properties";
+    //private static String registerDataFile = "src/test/resources/data/registerData.properties";
 
     private String userName;
     private  String fatherLastName;
@@ -37,9 +39,9 @@ public class RegisterHelper {
         return birthYear;
     }
 
-    public static String getRegisterDataFile() {
+    /*public static String getRegisterDataFile() {
         return registerDataFile;
-    }
+    }*/
 
     public String getUserName() {
         return userName;
@@ -85,12 +87,8 @@ public class RegisterHelper {
         return cellPhone;
     }
 
-    public RegisterHelper(){
-        try {
-            InputStream fileInput = new FileInputStream(registerDataFile); //generalizar esto
-            Properties prop = new Properties();
-            prop.load(fileInput);
-            //Deben estar toas pero vacias
+    public RegisterHelper(String dataFilePath){
+            Properties prop = Configuration.readConfiguration(dataFilePath);
             userName = prop.getProperty("userName");
             fatherLastName = prop.getProperty("fatherLastName");
             motherLastName = prop.getProperty("motherLastName");
@@ -104,9 +102,6 @@ public class RegisterHelper {
             birthday = prop.getProperty("birthday");
             separateDate(birthday);
             cellPhone = prop.getProperty("cellPhone");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     private void separateDate(String date){
@@ -116,14 +111,5 @@ public class RegisterHelper {
             birthMonth =dateCamp[1];
             birthYear =dateCamp[2];
         }
-
-
-
-
-
     }
-
-
-
-
 }

@@ -15,7 +15,7 @@ public class RegisterSteps {
 
     public RegisterSteps() {
         homePage = new HomePage(Hook.driver);
-        registerPage =new RegisterPage(Hook.driver);
+        registerPage =new RegisterPage(Hook.driver,"src/test/resources/data/registerData.properties");
     }
 
     @When("I try to register")

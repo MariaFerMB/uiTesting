@@ -9,7 +9,7 @@ public class ShoppingCartPage extends BasePage {
     @FindBy(xpath =  "//*[@class='fb-product__action-list__item fb-product__action-list__item--delete js-product__action-list--delete']")
     private WebElement deleteLink;
 
-    @FindBy(xpath =  "//*[@class='fb-order-status__empty-basket']")
+    @FindBy(xpath =  "//*[@id='fb-basket-products']//*[@class='fb-order-status__empty-basket']")
     private WebElement emptyShoppingCartMessage;
 
 
