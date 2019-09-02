@@ -3,7 +3,7 @@ package steps;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import helper.DrivenHelper;
+import helper.DriverHelper;
 import pages.ProductPage;
 import pages.ProductsPage;
 import pages.ShoppingCartPage;
@@ -13,14 +13,14 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 public class ShoppingCartSteps {
-    private DrivenHelper drivenHelper;
+    private DriverHelper drivenHelper;
     private ProductsPage productsPage;
     private ProductPage productPage;
     private ShoppingCartPage shoppingCartPage;
 
 
     public ShoppingCartSteps() {
-        drivenHelper = new DrivenHelper(Hook.driver);
+        drivenHelper = new DriverHelper(Hook.driver);
         productsPage = new ProductsPage(Hook.driver);
         productPage = new ProductPage(Hook.driver);
         shoppingCartPage = new ShoppingCartPage(Hook.driver);
@@ -54,11 +54,15 @@ public class ShoppingCartSteps {
         shoppingCartPage.deleteProduct();
     }
 
-    @Then("I should see a message saying that my cart is empty")
-    public void iShouldSeeAMessageSayingThatMyCartIsEmpty() {
-        String filePath ="src/test/resources/data/verifyMessage/emptyCartMessage.properties";
-        assertThat(shoppingCartPage.getEmptyShoppingCartMessage(), equalTo(VerifyMessage.getVerifyMessage(filePath)));
+//    @Then("I should see a message saying that my cart is empty")
+//    public void iShouldSeeAMessageSayingThatMyCartIsEmpty() {
+//        String filePath ="src/test/resources/data/verifyMessage/emptyCartMessage.properties";
+//        assertThat(shoppingCartPage.getEmptyShoppingCartMessage(), equalTo(VerifyMessage.getVerifyMessage(filePath)));
+//    }
+
+
+    @Then("I should see a message: ([^\"]*)")
+    public void iShouldSeeAMessage(String message) {
+        assertThat(shoppingCartPage.getEmptyShoppingCartMessage(), equalTo(message));
     }
-
-
 }

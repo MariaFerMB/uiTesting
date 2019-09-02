@@ -22,8 +22,5 @@ public class SignInHelper {
         return password;
     }
 
-    //public String getVerifyMessage() {
-      //  return verifyMessage;
-    //}
 
 }

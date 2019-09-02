@@ -37,6 +37,7 @@ public class ProductsPage extends BasePage {
        String[] priceName = productPrice.getText().split(" ");
        String stringPrice=priceName[1].replace(".","");
        int price = Integer.parseInt(stringPrice);
+       System.out.println(price);
        if (price>=startPrice&&price<=endPrice){
            response=true;
        }

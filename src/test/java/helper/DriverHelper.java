@@ -9,12 +9,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 
-public class DrivenHelper {
+public class DriverHelper {
 
-    private static int WAIT_TIME =11;
+    private static final int WAIT_TIME =11;
     private WebDriver driver;
 
-    public DrivenHelper(WebDriver driver){
+    public DriverHelper(WebDriver driver){
         this.driver=driver;
     }
 

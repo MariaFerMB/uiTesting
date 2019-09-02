@@ -10,4 +10,4 @@ Feature: Shopping cart
 
     Given I have a product in my shopping cart
     When I delete the product
-    Then I should see a message saying that my cart is empty
+    Then I should see a message: Tu Bolsa de Compras está vacía. Agrega productos ahora>>Seguir comprando

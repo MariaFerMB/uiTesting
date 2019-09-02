@@ -15,7 +15,6 @@ public class RegisterHelper {
     private  String documentType;
     private  String documentNumber;
     private  String genre;
-    private  String birthday;
     private  String birthDay ="";
     private  String birthMonth="";
     private  String birthYear="";
@@ -32,10 +31,6 @@ public class RegisterHelper {
     public String getBirthYear() {
         return birthYear;
     }
-
-    /*public static String getRegisterDataFile() {
-        return registerDataFile;
-    }*/
 
     public String getUserName() {
         return userName;
@@ -93,7 +88,7 @@ public class RegisterHelper {
             documentType = prop.getProperty("documentType");
             documentNumber = prop.getProperty("documentNumber");
             genre = prop.getProperty("genre");
-            birthday = prop.getProperty("birthday");
+             String birthday = prop.getProperty("birthday");
             separateDate(birthday);
             cellPhone = prop.getProperty("cellPhone");
     }

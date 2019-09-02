@@ -6,7 +6,6 @@ steps\CommonSteps.class
 steps\ShoppingCartSteps.class
 pages\RegisterPage.class
 helper\FilterHelper.class
-helper\DrivenHelper.class
 pages\ConfirmationProductPopUp.class
 steps\SignInSteps.class
 steps\SignOutSteps.class
@@ -16,6 +15,7 @@ pages\ShoppingCartPage.class
 helper\RegisterHelper.class
 utils\VerifyMessage.class
 pages\HomePage.class
+helper\DriverHelper.class
 pages\SignInPopUp.class
 steps\Hook.class
 utils\Configuration.class

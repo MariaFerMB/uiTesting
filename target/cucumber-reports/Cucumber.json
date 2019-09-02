@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2019-08-26T13:27:03.777Z",
+        "start_timestamp": "2019-09-02T22:08:52.764Z",
         "before": [
           {
             "result": {
-              "duration": 9072118500,
+              "duration": 6123345200,
               "status": "passed"
             },
             "match": {
@@ -22,7 +22,7 @@
         "after": [
           {
             "result": {
-              "duration": 880264100,
+              "duration": 986109200,
               "status": "passed"
             },
             "match": {
@@ -35,7 +35,7 @@
         "steps": [
           {
             "result": {
-              "duration": 46585937800,
+              "duration": 9316660900,
               "status": "passed"
             },
             "line": 4,
@@ -47,7 +47,7 @@
           },
           {
             "result": {
-              "duration": 44754891300,
+              "duration": 9582741900,
               "status": "passed"
             },
             "line": 5,
@@ -65,7 +65,7 @@
           },
           {
             "result": {
-              "duration": 4641711600,
+              "duration": 8119274100,
               "status": "passed"
             },
             "line": 6,
@@ -91,8 +91,9 @@
           },
           {
             "result": {
-              "duration": 423023000,
-              "status": "passed"
+              "error_message": "java.lang.AssertionError: \nExpected: \u003ctrue\u003e\n     but: was \u003cfalse\u003e\r\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)\r\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)\r\n\tat steps.FilterSteps.iShouldSeeJustProductsWithPricesInThisRange(FilterSteps.java:34)\r\n\tat ✽.I should see just products with prices between 5000 and 20000(file:src/test/resources/features/filter.feature:7)\r\n",
+              "duration": 162374900,
+              "status": "failed"
             },
             "line": 7,
             "name": "I should see just products with prices between 5000 and 20000",
@@ -125,11 +126,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2019-08-26T13:28:50.136Z",
+        "start_timestamp": "2019-09-02T22:09:27.071Z",
         "before": [
           {
             "result": {
-              "duration": 2870060400,
+              "duration": 4172466200,
               "status": "passed"
             },
             "match": {
@@ -144,7 +145,7 @@
         "after": [
           {
             "result": {
-              "duration": 1270139000,
+              "duration": 916072600,
               "status": "passed"
             },
             "match": {
@@ -157,7 +158,7 @@
         "steps": [
           {
             "result": {
-              "duration": 44996609500,
+              "duration": 4024893600,
               "status": "passed"
             },
             "line": 4,
@@ -169,7 +170,7 @@
           },
           {
             "result": {
-              "duration": 10039121300,
+              "duration": 11001042200,
               "status": "passed"
             },
             "line": 5,
@@ -181,7 +182,7 @@
           },
           {
             "result": {
-              "duration": 3032402400,
+              "duration": 2968162800,
               "status": "passed"
             },
             "line": 6,
@@ -199,7 +200,7 @@
           },
           {
             "result": {
-              "duration": 166428000,
+              "duration": 125437400,
               "status": "passed"
             },
             "line": 7,
@@ -211,7 +212,7 @@
           },
           {
             "result": {
-              "duration": 259926900,
+              "duration": 218865200,
               "status": "passed"
             },
             "line": 8,
@@ -235,11 +236,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2019-08-26T13:29:52.766Z",
+        "start_timestamp": "2019-09-02T22:09:50.499Z",
         "before": [
           {
             "result": {
-              "duration": 4330582200,
+              "duration": 3989392900,
               "status": "passed"
             },
             "match": {
@@ -254,7 +255,7 @@
         "after": [
           {
             "result": {
-              "duration": 909153100,
+              "duration": 980800300,
               "status": "passed"
             },
             "match": {
@@ -267,7 +268,7 @@
         "steps": [
           {
             "result": {
-              "duration": 92343675700,
+              "duration": 16438951000,
               "status": "passed"
             },
             "line": 5,
@@ -279,7 +280,7 @@
           },
           {
             "result": {
-              "duration": 3945344200,
+              "duration": 2640792400,
               "status": "passed"
             },
             "line": 6,
@@ -291,7 +292,7 @@
           },
           {
             "result": {
-              "duration": 112513000,
+              "duration": 253822700,
               "status": "passed"
             },
             "line": 7,
@@ -304,11 +305,11 @@
         ]
       },
       {
-        "start_timestamp": "2019-08-26T13:31:34.399Z",
+        "start_timestamp": "2019-09-02T22:10:14.803Z",
         "before": [
           {
             "result": {
-              "duration": 3673050200,
+              "duration": 4447076900,
               "status": "passed"
             },
             "match": {
@@ -323,7 +324,7 @@
         "after": [
           {
             "result": {
-              "duration": 885145800,
+              "duration": 1081987700,
               "status": "passed"
             },
             "match": {
@@ -336,7 +337,7 @@
         "steps": [
           {
             "result": {
-              "duration": 141870172500,
+              "duration": 21884895500,
               "status": "passed"
             },
             "line": 11,
@@ -348,9 +349,8 @@
           },
           {
             "result": {
-              "error_message": "org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document\n  (Session info: chrome\u003d76.0.3809.100)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027EN911088\u0027, ip: \u0027192.168.56.1\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_221\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: C:\\Users\\mmena\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59480}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 436b1fa13e0fed2b9f2318fb6c928ca6\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:326)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat com.sun.proxy.$Proxy17.isDisplayed(Unknown Source)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)\r\n\tat helper.DrivenHelper.waitVisible(DrivenHelper.java:23)\r\n\tat pages.ShoppingCartPage.deleteProduct(ShoppingCartPage.java:22)\r\n\tat steps.ShoppingCartSteps.iDeleteTheProduct(ShoppingCartSteps.java:54)\r\n\tat ✽.I delete the product(file:src/test/resources/features/shoppingCart.feature:12)\r\n",
-              "duration": 4044691900,
-              "status": "failed"
+              "duration": 1475146500,
+              "status": "passed"
             },
             "line": 12,
             "name": "I delete the product",
@@ -361,13 +361,19 @@
           },
           {
             "result": {
-              "duration": 20000,
-              "status": "skipped"
+              "duration": 84299400,
+              "status": "passed"
             },
             "line": 13,
-            "name": "I should see a message saying that my cart is empty",
+            "name": "I should see a message: Tu Bolsa de Compras está vacía. Agrega productos ahora\u003e\u003eSeguir comprando",
             "match": {
-              "location": "ShoppingCartSteps.iShouldSeeAMessageSayingThatMyCartIsEmpty()"
+              "arguments": [
+                {
+                  "val": "Tu Bolsa de Compras está vacía. Agrega productos ahora\u003e\u003eSeguir comprando",
+                  "offset": 24
+                }
+              ],
+              "location": "ShoppingCartSteps.iShouldSeeAMessage(String)"
             },
             "keyword": "Then "
           }
@@ -393,7 +399,7 @@
         "steps": [
           {
             "result": {
-              "duration": 46435871000,
+              "duration": 14940714600,
               "status": "passed"
             },
             "line": 4,
@@ -406,11 +412,11 @@
         ]
       },
       {
-        "start_timestamp": "2019-08-26T13:34:04.886Z",
+        "start_timestamp": "2019-09-02T22:10:43.777Z",
         "before": [
           {
             "result": {
-              "duration": 3485303400,
+              "duration": 3573721200,
               "status": "passed"
             },
             "match": {
@@ -425,7 +431,7 @@
         "after": [
           {
             "result": {
-              "duration": 867219600,
+              "duration": 867323700,
               "status": "passed"
             },
             "match": {
@@ -438,7 +444,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3393753700,
+              "duration": 2574901800,
               "status": "passed"
             },
             "line": 7,
@@ -450,13 +456,19 @@
           },
           {
             "result": {
-              "duration": 2404961500,
+              "duration": 1774803100,
               "status": "passed"
             },
             "line": 8,
-            "name": "I should be signed in",
+            "name": "I should see the sign in message: \"Bienvenid@,David\"",
             "match": {
-              "location": "SignInSteps.shouldBeSignedIn()"
+              "arguments": [
+                {
+                  "val": "\"Bienvenid@,David\"",
+                  "offset": 34
+                }
+              ],
+              "location": "SignInSteps.iShouldSeeTheSignInMessage(String)"
             },
             "keyword": "Then "
           }
@@ -471,7 +483,7 @@
         "steps": [
           {
             "result": {
-              "duration": 45541358400,
+              "duration": 3066568400,
               "status": "passed"
             },
             "line": 4,
@@ -484,11 +496,11 @@
         ]
       },
       {
-        "start_timestamp": "2019-08-26T13:35:01.476Z",
+        "start_timestamp": "2019-09-02T22:11:07.510Z",
         "before": [
           {
             "result": {
-              "duration": 4321149000,
+              "duration": 3813315000,
               "status": "passed"
             },
             "match": {
@@ -503,7 +515,7 @@
         "after": [
           {
             "result": {
-              "duration": 1255793400,
+              "duration": 927542400,
               "status": "passed"
             },
             "match": {
@@ -516,7 +528,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3500012800,
+              "duration": 3838960000,
               "status": "passed"
             },
             "line": 11,
@@ -528,13 +540,19 @@
           },
           {
             "result": {
-              "duration": 2241632700,
+              "duration": 1664888900,
               "status": "passed"
             },
             "line": 12,
-            "name": "I should see a sign in error",
+            "name": "I should see the sign in error message: E-mail o clave incorrecta. Por favor inténtalo nuevamente.",
             "match": {
-              "location": "SignInSteps.shouldSeeSignedInError()"
+              "arguments": [
+                {
+                  "val": "E-mail o clave incorrecta. Por favor inténtalo nuevamente.",
+                  "offset": 40
+                }
+              ],
+              "location": "SignInSteps.iShouldSeeTheSignInErrorMessage(String)"
             },
             "keyword": "Then "
           }
@@ -552,11 +570,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2019-08-26T13:35:58.337Z",
+        "start_timestamp": "2019-09-02T22:11:20.823Z",
         "before": [
           {
             "result": {
-              "duration": 3522710200,
+              "duration": 2971341600,
               "status": "passed"
             },
             "match": {
@@ -571,7 +589,7 @@
         "after": [
           {
             "result": {
-              "duration": 1011864400,
+              "duration": 879941900,
               "status": "passed"
             },
             "match": {
@@ -584,7 +602,7 @@
         "steps": [
           {
             "result": {
-              "duration": 44957272000,
+              "duration": 3895263300,
               "status": "passed"
             },
             "line": 4,
@@ -596,7 +614,7 @@
           },
           {
             "result": {
-              "duration": 4634271400,
+              "duration": 4675959200,
               "status": "passed"
             },
             "line": 5,
@@ -608,7 +626,7 @@
           },
           {
             "result": {
-              "duration": 2829299600,
+              "duration": 2631676000,
               "status": "passed"
             },
             "line": 6,
@@ -620,13 +638,19 @@
           },
           {
             "result": {
-              "duration": 62957345300,
+              "duration": 5496322700,
               "status": "passed"
             },
             "line": 7,
-            "name": "I should be signed out",
+            "name": "I should see the sign out message: \"Inicia sesiónMi cuenta\"",
             "match": {
-              "location": "SignOutSteps.showSignedIn()"
+              "arguments": [
+                {
+                  "val": "\"Inicia sesiónMi cuenta\"",
+                  "offset": 35
+                }
+              ],
+              "location": "SignOutSteps.iShouldSeeTheSignOutMessage(String)"
             },
             "keyword": "Then "
           }

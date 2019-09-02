@@ -1,15 +1,15 @@
 package steps;
 
 import cucumber.api.java.en.Given;
-import helper.DrivenHelper;
+import helper.DriverHelper;
 
 
 public class CommonSteps {
 
-    private DrivenHelper drivenHelper;
+    private final DriverHelper drivenHelper;
 
     public CommonSteps() {
-        drivenHelper = new DrivenHelper(Hook.driver);
+        drivenHelper = new DriverHelper(Hook.driver);
 
     }
 

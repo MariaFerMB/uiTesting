@@ -1,16 +1,16 @@
 package pages;
 
-import helper.DrivenHelper;
+import helper.DriverHelper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-public class BasePage {
+ class BasePage {
 
-    protected DrivenHelper drivenHelper;
+    protected DriverHelper drivenHelper;
 
     BasePage(WebDriver driver){
-        drivenHelper = new DrivenHelper(driver);
+        drivenHelper = new DriverHelper(driver);
         PageFactory.initElements(driver, this);
     }
 

@@ -25,7 +25,7 @@ public class Configuration {
     }
     public static WebDriver getDriver(String filePath){
         Properties prop = readConfiguration(filePath);
-            String driverName= prop.getProperty("driven");;
+            String driverName= prop.getProperty("driven");
             WebDriver driver =null;
             if (driverName.equals("Chrome")) {//enum
                 ChromeOptions options = new ChromeOptions();

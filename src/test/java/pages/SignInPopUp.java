@@ -25,24 +25,24 @@ public class SignInPopUp extends BasePage {
     private SignInHelper signInHelper;
 
 
-    public SignInPopUp(WebDriver driver) {
+    SignInPopUp(WebDriver driver) {
         super(driver);
 
     }
 
 
-    public void signIn(String filePath){
+     void signIn(String filePath){
         signInHelper =new SignInHelper(filePath);
         emailCamp.sendKeys(signInHelper.getEmail());
         passwordCamp.sendKeys(signInHelper.getPassword());
         clickElement(signInButton);
     }
 
-    public String getErrorMessage(){
+    String getErrorMessage(){
         drivenHelper.waitVisible(errorMessage );
         return errorMessage.getText();
     }
-    public void openRegister(){
+     void openRegister(){
         clickElement(registerLink);
     }
 

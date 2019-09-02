@@ -12,11 +12,11 @@ import static org.hamcrest.core.IsEqual.equalTo;
 public class SignOutSteps {
 
     private HomePage homePage;
-    private WebDriver driver;
+
 
     public SignOutSteps() {
-        driver =Hook.driver;
-        homePage = new HomePage(driver);
+
+        homePage = new HomePage(Hook.driver);
     }
 
 
@@ -25,11 +25,9 @@ public class SignOutSteps {
         homePage.signOut();
     }
 
-    @Then("I should be signed out$")
-    public void showSignedIn(){
-        String filePath ="src/test/resources/data/verifyMessage/signOutMessage.properties";
-        assertThat(homePage.verifySingOut(), equalTo(VerifyMessage.getVerifyMessage(filePath)));
+
+    @Then("I should see the sign out message: {string}")
+    public void iShouldSeeTheSignOutMessage(String signOutMessage) {
+        assertThat(homePage.getSingOutMessage(), equalTo(signOutMessage));
     }
-
-
 }

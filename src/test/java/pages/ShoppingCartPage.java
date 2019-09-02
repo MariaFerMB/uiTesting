@@ -24,7 +24,7 @@ public class ShoppingCartPage extends BasePage {
 
     public String  getEmptyShoppingCartMessage(){
         drivenHelper.waitVisible(emptyShoppingCartMessage);
-        return emptyShoppingCartMessage.getText();
+        return emptyShoppingCartMessage.getText().replaceAll("\\n", "");
     }
 
 

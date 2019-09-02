@@ -6,14 +6,14 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends BasePage{
 
-    @FindBy(className = "icon-logo fb-masthed__util-bar__icon")
-    private WebElement logo;
+//    @FindBy(className = "icon-logo fb-masthed__util-bar__icon")
+//    private WebElement logo;
 
     @FindBy(id = "header-login-modal")
     private WebElement signInElemente;
 
     @FindBy(id = "header-login-modal")
-    private WebElement userNAme;
+    private WebElement userName;
 
     @FindBy(xpath = "//*[@class='fb-masthead-login__name re-design-cl__name']")
     private WebElement singInMessage;
@@ -51,18 +51,18 @@ public class HomePage extends BasePage{
     }
 
 
-    public String verifySingIn() {
+    public String getSingInMessage() {
         drivenHelper.waitVisible(singInMessage);
-        return  getText(singInMessage);
+        return  getText(singInMessage).replaceAll("\\n", "");
     }
 
-    public String verifySingOut() {
+    public String getSingOutMessage() {
         drivenHelper.waitVisible(singOutMessage);
-        return  getText(singOutMessage);
+        return  getText(singOutMessage).replaceAll("\\n", "");
     }
 
 
-    public String  verifyNotSignIn(){
+    public String  getSignInErrorMessage(){
         return signInPopUp.getErrorMessage();
     }
 
