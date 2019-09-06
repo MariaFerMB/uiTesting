@@ -35,7 +35,8 @@ public class SignInPopUp extends BasePage {
         signInHelper =new SignInHelper(filePath);
         emailCamp.sendKeys(signInHelper.getEmail());
         passwordCamp.sendKeys(signInHelper.getPassword());
-        clickElement(signInButton);
+        signInButton.click();
+        //clickElement(signInButton);
     }
 
     String getErrorMessage(){
@@ -43,7 +44,8 @@ public class SignInPopUp extends BasePage {
         return errorMessage.getText();
     }
      void openRegister(){
-        clickElement(registerLink);
+        registerLink.click();
+        //clickElement(registerLink);
     }
 
     public SignInHelper getSignInHelper() {

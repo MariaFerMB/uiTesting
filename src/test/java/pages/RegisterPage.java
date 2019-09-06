@@ -1,31 +1,31 @@
 package pages;
 
-import helper.RegisterHelper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class RegisterPage extends BasePage {
+import java.util.Map;
+import java.util.Set;
 
-    private RegisterHelper registerHelper;
+public class RegisterPage extends BasePage {
 
     @FindBy(id = "user")
     private WebElement userCamp;
 
     @FindBy(id = "apellidopaterno")
-    private WebElement apellidopaternoCamp;
+    private WebElement fatherLastNameCamp;
 
     @FindBy(id = "apellidomaterno")
-    private WebElement apellidomaternoCamp;
+    private WebElement motherLastNameCamp;
 
     @FindBy(name = "mail")
-    private WebElement mailCamp;
+    private WebElement emailCamp;
 
     @FindBy(id = "clave1")
-    private WebElement clave1Camp;
+    private WebElement passwordCamp;
 
     @FindBy(id = "clave2")
-    private WebElement clave2Camp;
+    private WebElement verifyPasswordCamp;
 
     @FindBy(id = "status")
     private WebElement countryCamp;
@@ -43,13 +43,13 @@ public class RegisterPage extends BasePage {
     private WebElement femaleRadioButton;
 
     @FindBy(id = "day")
-    private WebElement brithDaySelector;
+    private WebElement birthDaySelector;
 
     @FindBy(id = "month")
-    private WebElement brithMonthSelector;
+    private WebElement birthMonthSelector;
 
     @FindBy(id = "year")
-    private WebElement brithYearSelector;
+    private WebElement birthYearSelector;
 
     @FindBy(id = "celular")
     private WebElement cellphoneCamp;
@@ -64,28 +64,67 @@ public class RegisterPage extends BasePage {
     private WebElement voidCellphoneMenssage;
 
 
-    public RegisterPage(WebDriver driver, String dataFilePath) {
+    public RegisterPage(WebDriver driver) {
         super(driver);
-        registerHelper =new RegisterHelper(dataFilePath); //puedo pasar la ruta
+    }
+
+    public void fillFormCamp(String campName, String value){
+        switch (campName) {
+            case "User name":
+                userCamp.sendKeys(value);
+                break;
+            case "Father last name":
+                fatherLastNameCamp.sendKeys(value);
+                break;
+            case "Mother last name":
+                motherLastNameCamp.sendKeys(value);
+                break;
+            case "Email":
+                emailCamp.sendKeys(value);
+                break;
+            case "Password":
+                passwordCamp.sendKeys(value);
+                break;
+            case "Verify password":
+                verifyPasswordCamp.sendKeys(value);
+                break;
+            case "Country":
+                countryCamp.sendKeys(value);
+                break;
+            case "Document type":
+                documentTypeCamp.sendKeys(value);
+                break;
+            case "Document number":
+                documentNumberCamp.sendKeys(value);
+                break;
+            case "Genre":
+                selectGener(value);
+                break;
+            case "Birth day":
+                birthDaySelector.sendKeys(value);
+                break;
+            case "Birth month":
+                birthMonthSelector.sendKeys(value);
+                break;
+            case "Birth year":
+                birthYearSelector.sendKeys(value);
+                break;
+
+        }
     }
 
 
-    public void fillForm(){
-        userCamp.sendKeys(registerHelper.getUserName());
-        apellidopaternoCamp.sendKeys(registerHelper.getFatherLastName());
-        apellidomaternoCamp.sendKeys(registerHelper.getMotherLastName());
-        mailCamp.sendKeys(registerHelper.getRegisterEmail());
-        clave1Camp.sendKeys(registerHelper.getRegisterPassword());
-        clave2Camp.sendKeys(registerHelper.getVerifyRegisterPassword());
-        countryCamp.sendKeys(registerHelper.getCountry());
-        documentTypeCamp.sendKeys(registerHelper.getDocumentType());
-        documentNumberCamp.sendKeys(registerHelper.getDocumentNumber());
-        selectGener(registerHelper.getGenre());
-        brithDaySelector.sendKeys(registerHelper.getBirthDay());
-        brithMonthSelector.sendKeys(registerHelper.getBirthMonth());
-        brithYearSelector.sendKeys(registerHelper.getBirthYear());
-        cellphoneCamp.sendKeys(registerHelper.getCellPhone());
+    public void fillForm(Map<String,String> mapData) {
 
+        Set<String> mapKeys = mapData.keySet();
+
+        for (String key : mapKeys) {
+            String value = mapData.get(key);
+            if (value != null) {
+                fillFormCamp(key, value);
+            }
+
+        }
     }
     public void saveData(){
          saveButton.click();

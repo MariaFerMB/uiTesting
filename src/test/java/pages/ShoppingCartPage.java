@@ -18,7 +18,8 @@ public class ShoppingCartPage extends BasePage {
     }
 
     public void deleteProduct(){
-        clickElement(deleteLink);
+        deleteLink.click();
+        //clickElement(deleteLink);
         drivenHelper.waitVisible(emptyShoppingCartMessage);
     }
 

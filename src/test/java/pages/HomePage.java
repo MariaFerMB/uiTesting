@@ -16,13 +16,13 @@ public class HomePage extends BasePage{
     private WebElement userName;
 
     @FindBy(xpath = "//*[@class='fb-masthead-login__name re-design-cl__name']")
-    private WebElement singInMessage;
+    private WebElement signInMessage;
 
     @FindBy(xpath = "//*[@class='fb-filter-header__log-out']")
     private WebElement signOutbutton;
 
     @FindBy(xpath = "//*[@class='fb-masthead-login__name re-design-cl__name login-redesing_logout-box']")
-    private WebElement singOutMessage;
+    private WebElement signOutMessage;
 
     @FindBy(xpath = "//*[@class='fb-masthead-search__box__input']")
     private WebElement searchBar;
@@ -42,7 +42,7 @@ public class HomePage extends BasePage{
         signInPopUp.signIn(filePath);
     }
     private void openSingInPopUp(){
-        clickElement(signInElemente);
+        signInElemente.click();
     }
 
     public void openRegister(){
@@ -51,14 +51,14 @@ public class HomePage extends BasePage{
     }
 
 
-    public String getSingInMessage() {
-        drivenHelper.waitVisible(singInMessage);
-        return  getText(singInMessage).replaceAll("\\n", "");
+    public String getSignInMessage() {
+        drivenHelper.waitVisible(signInMessage);
+        return  signInMessage.getText().replaceAll("\\n", "");
     }
 
-    public String getSingOutMessage() {
-        drivenHelper.waitVisible(singOutMessage);
-        return  getText(singOutMessage).replaceAll("\\n", "");
+    public String getSignOutMessage() {
+        drivenHelper.waitVisible(signOutMessage);
+        return  signOutMessage.getText().replaceAll("\\n", "");
     }
 
 
@@ -67,14 +67,14 @@ public class HomePage extends BasePage{
     }
 
     public void signOut(){
-        drivenHelper.waitVisible(singInMessage);
-        clickElement(singInMessage);
-        clickElement(signOutbutton);
+        drivenHelper.waitVisible(signInMessage);
+        signInMessage.click();
+        signOutbutton.click();
     }
 
     public  void  search(String search){
         searchBar.sendKeys(search);
-        clickElement(searchIcon);
+        searchIcon.click();
     }
 
 }

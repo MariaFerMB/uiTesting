@@ -1,6 +1,7 @@
 package pages;
 
 import helper.FilterHelper;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -23,7 +24,8 @@ public class ProductsPage extends BasePage {
     }
 
     public void opendProduct(){
-       clickElement(product);
+       product.click();
+       //clickElement(product);
     }
 
     public void applyPriceFilter(String filterName,String start, String end){
@@ -47,14 +49,13 @@ public class ProductsPage extends BasePage {
 
     private void applyFilter(String xpath,String filterName){
         FilterHelper filterHelper =new FilterHelper();
-        List<WebElement> filters = drivenHelper.fineElementsByXpath(containerFilters,xpath);
+        List<WebElement> filters =  containerFilters.findElements(By.xpath(xpath));
         WebElement filter=filterHelper.findFilter(filters,filterName);
         if(filter!=null){
-            clickElement(filter);
+            filter.click();
+          //  clickElement(filter);
         }
 
     }
-
-
 
 }

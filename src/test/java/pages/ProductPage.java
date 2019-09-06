@@ -22,7 +22,8 @@ public class ProductPage extends BasePage {
 
     public void addShoppingCartProduct(){
         drivenHelper.waitVisible(addToCartButton);
-        clickElement(addToCartButton);
+        addToCartButton.click();
+        //clickElement(addToCartButton);
         drivenHelper.waitVisible(pop);
     }
 

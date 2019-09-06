@@ -5,6 +5,9 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import pages.HomePage;
 import pages.RegisterPage;
+
+import java.util.Map;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
@@ -15,7 +18,7 @@ public class RegisterSteps {
 
     public RegisterSteps() {
         homePage = new HomePage(Hook.driver);
-        registerPage =new RegisterPage(Hook.driver,"src/test/resources/data/registerData.properties");
+        registerPage =new RegisterPage(Hook.driver);
     }
 
     @When("I try to register")
@@ -24,9 +27,9 @@ public class RegisterSteps {
     }
 
 
-    @And("I fill all the field except for {string}")
-    public void iFillAllTheFieldExceptFor(String voidCamp) {
-        registerPage.fillForm();
+    @And("I fill all the field except for \"celular\"")
+    public void iFillAllTheFieldExceptFor(Map<String,String> data) {
+        registerPage.fillForm(data);
 
     }
 
