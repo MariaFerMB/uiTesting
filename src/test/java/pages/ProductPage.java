@@ -12,7 +12,6 @@ public class ProductPage extends BasePage {
     private WebElement pop;
 
 
-
     private ConfirmationProductPopUp confirmationProductPopUp;
 
     public ProductPage(WebDriver driver) {
@@ -20,14 +19,13 @@ public class ProductPage extends BasePage {
         confirmationProductPopUp = new ConfirmationProductPopUp(driver);
     }
 
-    public void addShoppingCartProduct(){
+    public void addShoppingCartProduct() {
         drivenHelper.waitVisible(addToCartButton);
         addToCartButton.click();
-        //clickElement(addToCartButton);
         drivenHelper.waitVisible(pop);
     }
 
-    public String getAddProductConfirmationMessage(){
+    public String getAddProductConfirmationMessage() {
         return confirmationProductPopUp.getConfirmationTitle();
     }
 

@@ -1,9 +1,10 @@
 package steps;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import helper.DriverHelper;
+import helper.DriverFacade;
 import pages.ProductPage;
 import pages.ProductsPage;
 import pages.ShoppingCartPage;
@@ -12,14 +13,18 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 public class ShoppingCartSteps {
-    private DriverHelper drivenHelper;
+
+    private static final String SPECIFIC_PRODUCT_URL = "https://www.falabella.com.co/falabella-co/category/cat910963/Celulares-y-Telefonos?isPLP=1";
+    private static final String SHOPPING_CART_URL = "https://www.falabella.com.co/falabella-co/basket";
+
+    private DriverFacade drivenHelper;
     private ProductsPage productsPage;
     private ProductPage productPage;
     private ShoppingCartPage shoppingCartPage;
 
 
     public ShoppingCartSteps() {
-        drivenHelper = new DriverHelper(Hook.driver);
+        drivenHelper = new DriverFacade(Hook.driver);
         productsPage = new ProductsPage(Hook.driver);
         productPage = new ProductPage(Hook.driver);
         shoppingCartPage = new ShoppingCartPage(Hook.driver);
@@ -27,8 +32,8 @@ public class ShoppingCartSteps {
 
     @Given("I am in a product page")
     public void iAmInAProductPage() {
-        drivenHelper.openPage("https://www.falabella.com.co/falabella-co/category/cat910963/Celulares-y-Telefonos?isPLP=1");
-        productsPage.opendProduct();
+        drivenHelper.openPage(SPECIFIC_PRODUCT_URL);
+        productsPage.openProduct();
     }
 
     @When("I add the product to the cart")
@@ -41,23 +46,15 @@ public class ShoppingCartSteps {
         assertThat(productPage.getAddProductConfirmationMessage(), equalTo("Agregado"));
     }
 
-    @Given("I have a product in my shopping cart")
+    @And("I go to the shopping cart page")
     public void iHaveAProductInMyShoppingCart() {
-        iAmInAProductPage();
-        iAddTheProductToTheCart();
-        drivenHelper.openPage("https://www.falabella.com.co/falabella-co/basket");
+        drivenHelper.openPage(SHOPPING_CART_URL);
     }
 
-    @When("I delete the product")
+    @And("I delete the product")
     public void iDeleteTheProduct() {
         shoppingCartPage.deleteProduct();
     }
-
-//    @Then("I should see a message saying that my cart is empty")
-//    public void iShouldSeeAMessageSayingThatMyCartIsEmpty() {
-//        String filePath ="src/test/resources/data/verifyMessage/emptyCartMessage.properties";
-//        assertThat(shoppingCartPage.getEmptyShoppingCartMessage(), equalTo(VerifyMessage.getVerifyMessage(filePath)));
-//    }
 
 
     @Then("I should see a message: ([^\"]*)")

@@ -16,44 +16,54 @@ public class ProductsPage extends BasePage {
     @FindBy(className = "fb-filter-bar")
     private WebElement containerFilters;
 
-    @FindBy(xpath = "//*[@class='fb-price-list']//*[@class='fb-price']")
-    private WebElement productPrice;
+    @FindBy(xpath = "//*[@class='fb-price-list']//p[contains(text(),'(Internet)')]")
+    private List<WebElement> productsPrice;
 
-   public ProductsPage(WebDriver driver) {
+    @FindBy(xpath = "//*[@class='fb-cpy-bold-small fb-selectedfilters__title']")
+    private WebElement selectsFilters;
+
+    private By titleOfFilters = By.xpath("//*[@class='fb-filter_container']");
+    private By filterOptions = By.xpath("//*[@class='content-text-verticalFilter']");
+
+    public ProductsPage(WebDriver driver) {
         super(driver);
     }
 
-    public void opendProduct(){
-       product.click();
-       //clickElement(product);
+    public void openProduct() {
+        product.click();
     }
 
-    public void applyPriceFilter(String filterName,String start, String end){
-        FilterHelper filterHelper =new FilterHelper();
-       applyFilter("//*[@class='fb-filter_container']",filterName);
-       applyFilter("//*[@class='content-text-verticalFilter']",filterHelper.rangeName(start,end));
+    public void applyPriceFilter(String filterName, String start, String end) {
+        FilterHelper filterHelper = new FilterHelper();
+        applyFilter( filterName,titleOfFilters);
+        applyFilter(filterHelper.rangeName(start, end),filterOptions);
     }
 
-    public boolean verifyPriceFilter(int startPrice,int endPrice){
-       boolean response =false;
-       String[] priceName = productPrice.getText().split(" ");
-       String stringPrice=priceName[1].replace(".","");
-       int price = Integer.parseInt(stringPrice);
-       System.out.println(price);
-       if (price>=startPrice&&price<=endPrice){
-           response=true;
-       }
-       return response;
+    public boolean verifyPriceFilter(int startPrice, int endPrice) {
+        drivenHelper.waitVisible(selectsFilters);
+        boolean response = true;
+        for (WebElement productPrice: productsPrice){
+            String[] priceName = productPrice.getText().split(" ");
+            String stringPrice = priceName[1].replace(".", "");
+            int price = Integer.parseInt(stringPrice);
+            if (price < startPrice && price > endPrice) {
+
+                response = false;
+            }
+
+        }
+
+
+        return response;
     }
 
 
-    private void applyFilter(String xpath,String filterName){
-        FilterHelper filterHelper =new FilterHelper();
-        List<WebElement> filters =  containerFilters.findElements(By.xpath(xpath));
-        WebElement filter=filterHelper.findFilter(filters,filterName);
-        if(filter!=null){
+    private void applyFilter( String filterName, By path) {
+        FilterHelper filterHelper = new FilterHelper();
+        List<WebElement> filters = containerFilters.findElements(path);
+        WebElement filter = filterHelper.findFilter(filters, filterName);
+        if (filter != null) {
             filter.click();
-          //  clickElement(filter);
         }
 
     }

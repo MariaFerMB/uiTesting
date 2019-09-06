@@ -10,12 +10,11 @@ public class ConfirmationProductPopUp extends BasePage {
     private WebElement confirmationTitle;
 
 
-
     public ConfirmationProductPopUp(WebDriver driver) {
         super(driver);
     }
 
-    public String getConfirmationTitle(){
+    public String getConfirmationTitle() {
         return confirmationTitle.getText();
     }
 }

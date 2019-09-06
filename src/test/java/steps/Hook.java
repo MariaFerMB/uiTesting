@@ -9,13 +9,15 @@ import utils.Configuration;
 public class Hook {
 
     public static WebDriver driver;
+    private static final String DRIVER_PROPERTIES = "src/test/resources/data/driver.properties";
 
     @Before
-    public void setup(){
-        driver = Configuration.getDriver("src/test/resources/data/driver.properties");
+    public void setup() {
+        driver = Configuration.getDriver(DRIVER_PROPERTIES);
     }
+
     @After
-    public void close(){
+    public void close() {
         driver.quit();
     }
 }

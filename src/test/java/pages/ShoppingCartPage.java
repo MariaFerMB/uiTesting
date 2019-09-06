@@ -6,28 +6,30 @@ import org.openqa.selenium.support.FindBy;
 
 public class ShoppingCartPage extends BasePage {
 
-    @FindBy(xpath =  "//*[@class='fb-product__action-list__item fb-product__action-list__item--delete js-product__action-list--delete']")
+    @FindBy(xpath = "//*[@class='fb-product__action-list__item fb-product__action-list__item--delete js-product__action-list--delete']")
     private WebElement deleteLink;
 
-    @FindBy(xpath =  "//*[@id='fb-basket-products']//*[@class='fb-order-status__empty-basket']")
+    @FindBy(xpath = "//*[@id='fb-basket-products']//*[@class='fb-order-status__empty-basket']")
     private WebElement emptyShoppingCartMessage;
+
+    @FindBy(xpath = "//*[@class='fb-order-status__subtitle']}")
+    private WebElement numberProductus;
+
 
 
     public ShoppingCartPage(WebDriver driver) {
         super(driver);
     }
 
-    public void deleteProduct(){
+    public void deleteProduct() {
         deleteLink.click();
-        //clickElement(deleteLink);
         drivenHelper.waitVisible(emptyShoppingCartMessage);
     }
 
-    public String  getEmptyShoppingCartMessage(){
+    public String getEmptyShoppingCartMessage() {
         drivenHelper.waitVisible(emptyShoppingCartMessage);
         return emptyShoppingCartMessage.getText().replaceAll("\\n", "");
     }
-
 
 
 }

@@ -18,7 +18,7 @@ public class RegisterSteps {
 
     public RegisterSteps() {
         homePage = new HomePage(Hook.driver);
-        registerPage =new RegisterPage(Hook.driver);
+        registerPage = new RegisterPage(Hook.driver);
     }
 
     @When("I try to register")
@@ -28,7 +28,7 @@ public class RegisterSteps {
 
 
     @And("I fill all the field except for \"celular\"")
-    public void iFillAllTheFieldExceptFor(Map<String,String> data) {
+    public void iFillAllTheFieldExceptFor(Map<String, String> data) {
         registerPage.fillForm(data);
 
     }
@@ -38,8 +38,8 @@ public class RegisterSteps {
         registerPage.saveData();
     }
 
-    @Then("I should see a error message")
-    public void iShouldSeeAErrorMessage() {
-        assertThat(registerPage.getCelVacioMenssage(), equalTo("Debes ingresar un celular"));
+    @Then("I should see a error message: ([^\"]*)")
+    public void iShouldSeeAErrorMessage(String errorMessage) {
+        assertThat(registerPage.getCelVacioMenssage(), equalTo(errorMessage));
     }
 }

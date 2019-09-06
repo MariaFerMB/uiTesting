@@ -68,7 +68,7 @@ public class RegisterPage extends BasePage {
         super(driver);
     }
 
-    public void fillFormCamp(String campName, String value){
+    private void fillFormCamp(String campName, String value) {
         switch (campName) {
             case "User name":
                 userCamp.sendKeys(value);
@@ -97,8 +97,8 @@ public class RegisterPage extends BasePage {
             case "Document number":
                 documentNumberCamp.sendKeys(value);
                 break;
-            case "Genre":
-                selectGener(value);
+            case "Gender":
+                selectGender(value);
                 break;
             case "Birth day":
                 birthDaySelector.sendKeys(value);
@@ -114,7 +114,7 @@ public class RegisterPage extends BasePage {
     }
 
 
-    public void fillForm(Map<String,String> mapData) {
+    public void fillForm(Map<String, String> mapData) {
 
         Set<String> mapKeys = mapData.keySet();
 
@@ -126,20 +126,21 @@ public class RegisterPage extends BasePage {
 
         }
     }
-    public void saveData(){
-         saveButton.click();
-    }
-    public  String getCelVacioMenssage(){
-       drivenHelper.waitVisible(voidCellphoneMenssage);
-       return voidCellphoneMenssage.getText();
+
+    public void saveData() {
+        saveButton.click();
     }
 
-    private void selectGener(String gener){
-        if(gener!=null && !gener.equals("")){
-            if (gener.equals("Female")){
+    public String getCelVacioMenssage() {
+        drivenHelper.waitVisible(voidCellphoneMenssage);
+        return voidCellphoneMenssage.getText();
+    }
+
+    private void selectGender(String gender) {
+        if (gender != null && !gender.equals("")) {
+            if (gender.equals("Female")) {
                 femaleRadioButton.click();
-            }
-            else if (gener.equals("Male")){
+            } else if (gender.equals("Male")) {
                 maleRadioButton.click();
 
             }

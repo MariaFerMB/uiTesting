@@ -25,13 +25,13 @@ public class FilterSteps {
     }
 
     @When("I apply the filter for {string} between {string} and {string}")
-    public void iApplyTheFilterForPriceBetweenAnd(String filterName,String  start, String end) {
+    public void iApplyTheFilterForPriceBetweenAnd(String filterName, String start, String end) {
         productsPage.applyPriceFilter(filterName, start, end);
     }
 
     @Then("I should see just products with prices between {int} and {int}")
     public void iShouldSeeJustProductsWithPricesInThisRange(int start, int end) {
-        assertThat(productsPage.verifyPriceFilter(start,end), equalTo(true));
+        assertThat(productsPage.verifyPriceFilter(start, end), equalTo(true));
 
     }
 

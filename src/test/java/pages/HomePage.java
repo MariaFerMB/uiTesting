@@ -4,13 +4,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class HomePage extends BasePage{
+import java.util.Map;
 
-//    @FindBy(className = "icon-logo fb-masthed__util-bar__icon")
-//    private WebElement logo;
+public class HomePage extends BasePage {
+
 
     @FindBy(id = "header-login-modal")
-    private WebElement signInElemente;
+    private WebElement signInElement;
 
     @FindBy(id = "header-login-modal")
     private WebElement userName;
@@ -19,7 +19,7 @@ public class HomePage extends BasePage{
     private WebElement signInMessage;
 
     @FindBy(xpath = "//*[@class='fb-filter-header__log-out']")
-    private WebElement signOutbutton;
+    private WebElement signOutButton;
 
     @FindBy(xpath = "//*[@class='fb-masthead-login__name re-design-cl__name login-redesing_logout-box']")
     private WebElement signOutMessage;
@@ -34,18 +34,19 @@ public class HomePage extends BasePage{
 
     public HomePage(WebDriver driver) {
         super(driver);
-        signInPopUp =new SignInPopUp(driver);
+        signInPopUp = new SignInPopUp(driver);
     }
 
-    public void signIn(String filePath){
+    public void signIn(Map<String,String> singInData) {
         openSingInPopUp();
-        signInPopUp.signIn(filePath);
-    }
-    private void openSingInPopUp(){
-        signInElemente.click();
+        signInPopUp.signIn(singInData);
     }
 
-    public void openRegister(){
+    private void openSingInPopUp() {
+        signInElement.click();
+    }
+
+    public void openRegister() {
         openSingInPopUp();
         signInPopUp.openRegister();
     }
@@ -53,26 +54,26 @@ public class HomePage extends BasePage{
 
     public String getSignInMessage() {
         drivenHelper.waitVisible(signInMessage);
-        return  signInMessage.getText().replaceAll("\\n", "");
+        return signInMessage.getText().replaceAll("\\n", "");
     }
 
     public String getSignOutMessage() {
         drivenHelper.waitVisible(signOutMessage);
-        return  signOutMessage.getText().replaceAll("\\n", "");
+        return signOutMessage.getText().replaceAll("\\n", "");
     }
 
 
-    public String  getSignInErrorMessage(){
+    public String getSignInErrorMessage() {
         return signInPopUp.getErrorMessage();
     }
 
-    public void signOut(){
+    public void signOut() {
         drivenHelper.waitVisible(signInMessage);
         signInMessage.click();
-        signOutbutton.click();
+        signOutButton.click();
     }
 
-    public  void  search(String search){
+    public void search(String search) {
         searchBar.sendKeys(search);
         searchIcon.click();
     }

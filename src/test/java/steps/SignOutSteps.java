@@ -18,8 +18,8 @@ public class SignOutSteps {
     }
 
 
-    @When("I sign out$")
-    public void singInValid(){
+    @When("I click in the sign out button$")
+    public void singOut() {
         homePage.signOut();
     }
 

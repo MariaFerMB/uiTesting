@@ -1,9 +1,10 @@
 package pages;
 
-import helper.SignInHelper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.Map;
 
 public class SignInPopUp extends BasePage {
 
@@ -20,9 +21,7 @@ public class SignInPopUp extends BasePage {
     private WebElement signInButton;
 
     @FindBy(xpath = "//*[@class='Login__errorText__13IML']")
-    private  WebElement errorMessage;
-
-    private SignInHelper signInHelper;
+    private WebElement errorMessage;
 
 
     SignInPopUp(WebDriver driver) {
@@ -31,24 +30,19 @@ public class SignInPopUp extends BasePage {
     }
 
 
-     void signIn(String filePath){
-        signInHelper =new SignInHelper(filePath);
-        emailCamp.sendKeys(signInHelper.getEmail());
-        passwordCamp.sendKeys(signInHelper.getPassword());
+    void signIn(Map<String,String> signInData) {
+        emailCamp.sendKeys(signInData.get("Email"));
+        passwordCamp.sendKeys(signInData.get("Password"));
         signInButton.click();
-        //clickElement(signInButton);
     }
 
-    String getErrorMessage(){
-        drivenHelper.waitVisible(errorMessage );
+    String getErrorMessage() {
+        drivenHelper.waitVisible(errorMessage);
         return errorMessage.getText();
     }
-     void openRegister(){
+
+    void openRegister() {
         registerLink.click();
-        //clickElement(registerLink);
     }
 
-    public SignInHelper getSignInHelper() {
-        return signInHelper;
-    }
 }
