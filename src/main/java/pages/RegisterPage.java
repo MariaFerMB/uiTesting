@@ -132,7 +132,7 @@ public class RegisterPage extends BasePage {
     }
 
     public String getCelVacioMenssage() {
-        drivenHelper.waitVisible(voidCellphoneMenssage);
+        drivenFacade.waitVisible(voidCellphoneMenssage);
         return voidCellphoneMenssage.getText();
     }
 

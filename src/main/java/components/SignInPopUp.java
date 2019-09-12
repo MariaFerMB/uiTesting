@@ -1,12 +1,13 @@
-package pages;
+package components;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utils.PageObject;
 
 import java.util.Map;
 
-public class SignInPopUp extends BasePage {
+public class SignInPopUp extends PageObject {
 
     @FindBy(id = "emailAddress")
     private WebElement emailCamp;
@@ -24,24 +25,23 @@ public class SignInPopUp extends BasePage {
     private WebElement errorMessage;
 
 
-    SignInPopUp(WebDriver driver) {
+    public SignInPopUp(WebDriver driver) {
         super(driver);
-
     }
 
 
-    void signIn(Map<String,String> signInData) {
+    public void signIn(Map<String,String> signInData) {
         emailCamp.sendKeys(signInData.get("Email"));
         passwordCamp.sendKeys(signInData.get("Password"));
         signInButton.click();
     }
 
-    String getErrorMessage() {
-        drivenHelper.waitVisible(errorMessage);
+    public String getErrorMessage() {
+        drivenFacade.waitVisible(errorMessage);
         return errorMessage.getText();
     }
 
-    void openRegister() {
+    public void openRegister() {
         registerLink.click();
     }
 

@@ -5,6 +5,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import pages.HomePage;
 import pages.ProductsPage;
+import utils.DriverFactory;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
@@ -15,8 +16,8 @@ public class FilterSteps {
 
 
     public FilterSteps() {
-        homePage = new HomePage(Hook.driver);
-        productsPage = new ProductsPage(Hook.driver);
+        homePage = new HomePage(DriverFactory.getDriver());
+        productsPage = new ProductsPage(DriverFactory.getDriver());
     }
 
     @And("I search for {string}")

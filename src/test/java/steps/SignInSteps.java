@@ -3,6 +3,7 @@ package steps;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import pages.HomePage;
+import utils.DriverFactory;
 
 import java.util.Map;
 
@@ -14,7 +15,7 @@ public class SignInSteps {
     private HomePage homePage;
 
     public SignInSteps() {
-        homePage = new HomePage(Hook.driver);
+        homePage = new HomePage(DriverFactory.getDriver());
     }
 
     @When("I sign in with the next credentials$")

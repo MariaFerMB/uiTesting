@@ -23,11 +23,11 @@ public class ShoppingCartPage extends BasePage {
 
     public void deleteProduct() {
         deleteLink.click();
-        drivenHelper.waitVisible(emptyShoppingCartMessage);
+        drivenFacade.waitVisible(emptyShoppingCartMessage);
     }
 
     public String getEmptyShoppingCartMessage() {
-        drivenHelper.waitVisible(emptyShoppingCartMessage);
+        drivenFacade.waitVisible(emptyShoppingCartMessage);
         return emptyShoppingCartMessage.getText().replaceAll("\\n", "");
     }
 

@@ -8,6 +8,7 @@ import helper.DriverFacade;
 import pages.ProductPage;
 import pages.ProductsPage;
 import pages.ShoppingCartPage;
+import utils.DriverFactory;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
@@ -24,10 +25,10 @@ public class ShoppingCartSteps {
 
 
     public ShoppingCartSteps() {
-        drivenHelper = new DriverFacade(Hook.driver);
-        productsPage = new ProductsPage(Hook.driver);
-        productPage = new ProductPage(Hook.driver);
-        shoppingCartPage = new ShoppingCartPage(Hook.driver);
+        drivenHelper = new DriverFacade(DriverFactory.getDriver());
+        productsPage = new ProductsPage(DriverFactory.getDriver());
+        productPage = new ProductPage(DriverFactory.getDriver());
+        shoppingCartPage = new ShoppingCartPage(DriverFactory.getDriver());
     }
 
     @Given("I am in a product page")

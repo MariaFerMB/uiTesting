@@ -3,6 +3,7 @@ package steps;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import pages.HomePage;
+import utils.DriverFactory;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
@@ -14,7 +15,7 @@ public class SignOutSteps {
 
     public SignOutSteps() {
 
-        homePage = new HomePage(Hook.driver);
+        homePage = new HomePage(DriverFactory.getDriver());
     }
 
 

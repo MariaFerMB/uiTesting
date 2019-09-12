@@ -2,6 +2,7 @@ package steps;
 
 import cucumber.api.java.en.Given;
 import helper.DriverFacade;
+import utils.DriverFactory;
 
 
 public class CommonSteps {
@@ -11,7 +12,7 @@ public class CommonSteps {
 
 
     public CommonSteps() {
-        drivenHelper = new DriverFacade(Hook.driver);
+        drivenHelper = new DriverFacade(DriverFactory.getDriver());
 
     }
 

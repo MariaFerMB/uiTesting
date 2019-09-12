@@ -1,5 +1,6 @@
 package pages;
 
+import components.ConfirmationProductPopUp;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,9 +21,9 @@ public class ProductPage extends BasePage {
     }
 
     public void addShoppingCartProduct() {
-        drivenHelper.waitVisible(addToCartButton);
+        drivenFacade.waitVisible(addToCartButton);
         addToCartButton.click();
-        drivenHelper.waitVisible(pop);
+        drivenFacade.waitVisible(pop);
     }
 
     public String getAddProductConfirmationMessage() {

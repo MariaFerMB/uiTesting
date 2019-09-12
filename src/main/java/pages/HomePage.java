@@ -1,5 +1,6 @@
 package pages;
 
+import components.SignInPopUp;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -53,12 +54,12 @@ public class HomePage extends BasePage {
 
 
     public String getSignInMessage() {
-        drivenHelper.waitVisible(signInMessage);
+        drivenFacade.waitVisible(signInMessage);
         return signInMessage.getText().replaceAll("\\n", "");
     }
 
     public String getSignOutMessage() {
-        drivenHelper.waitVisible(signOutMessage);
+        drivenFacade.waitVisible(signOutMessage);
         return signOutMessage.getText().replaceAll("\\n", "");
     }
 
@@ -68,7 +69,7 @@ public class HomePage extends BasePage {
     }
 
     public void signOut() {
-        drivenHelper.waitVisible(signInMessage);
+        drivenFacade.waitVisible(signInMessage);
         signInMessage.click();
         signOutButton.click();
     }

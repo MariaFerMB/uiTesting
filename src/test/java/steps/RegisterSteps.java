@@ -5,6 +5,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import pages.HomePage;
 import pages.RegisterPage;
+import utils.DriverFactory;
 
 import java.util.Map;
 
@@ -17,8 +18,8 @@ public class RegisterSteps {
     private RegisterPage registerPage;
 
     public RegisterSteps() {
-        homePage = new HomePage(Hook.driver);
-        registerPage = new RegisterPage(Hook.driver);
+        homePage = new HomePage(DriverFactory.getDriver());
+        registerPage = new RegisterPage(DriverFactory.getDriver());
     }
 
     @When("I try to register")

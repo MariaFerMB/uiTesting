@@ -40,7 +40,7 @@ public class ProductsPage extends BasePage {
     }
 
     public boolean verifyPriceFilter(int startPrice, int endPrice) {
-        drivenHelper.waitVisible(selectsFilters);
+        drivenFacade.waitVisible(selectsFilters);
         boolean response = true;
         for (WebElement productPrice: productsPrice){
             String[] priceName = productPrice.getText().split(" ");
