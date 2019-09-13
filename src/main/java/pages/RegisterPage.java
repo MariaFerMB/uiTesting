@@ -54,39 +54,41 @@ public class RegisterPage extends BasePage {
     @FindBy(id = "celular")
     private WebElement cellphoneCamp;
 
-    @FindBy(id = "agreelegaleId")
-    private WebElement agreeLegaleCheckbox;
-
     @FindBy(id = "boton_Ar")
     private WebElement saveButton;
 
     @FindBy(id = "mensajeCelVacio")
-    private WebElement voidCellphoneMenssage;
+    private WebElement voidCellphoneMessage;
 
 
     public RegisterPage(WebDriver driver) {
         super(driver);
     }
 
+    /**
+     * Write a specific information in a camp of the register format
+     * @param campName name of the camp that will be fill
+     * @param value information to fill the camp
+     */
     private void fillFormCamp(String campName, String value) {
         switch (campName) {
             case "User name":
-                userCamp.sendKeys(value);
+                sendKeys(userCamp, value);
                 break;
             case "Father last name":
-                fatherLastNameCamp.sendKeys(value);
+                sendKeys(fatherLastNameCamp, value);
                 break;
             case "Mother last name":
-                motherLastNameCamp.sendKeys(value);
+                sendKeys(motherLastNameCamp, value);
                 break;
             case "Email":
-                emailCamp.sendKeys(value);
+                sendKeys(emailCamp, value);
                 break;
             case "Password":
-                passwordCamp.sendKeys(value);
+                sendKeys(passwordCamp, value);
                 break;
             case "Verify password":
-                verifyPasswordCamp.sendKeys(value);
+                sendKeys(verifyPasswordCamp, value);
                 break;
             case "Country":
                 countryCamp.sendKeys(value);
@@ -95,7 +97,7 @@ public class RegisterPage extends BasePage {
                 documentTypeCamp.sendKeys(value);
                 break;
             case "Document number":
-                documentNumberCamp.sendKeys(value);
+                sendKeys(documentNumberCamp, value);
                 break;
             case "Gender":
                 selectGender(value);
@@ -114,6 +116,10 @@ public class RegisterPage extends BasePage {
     }
 
 
+    /**
+     * Fill all the camps tha are in the map
+     * @param mapData camps and values of th register form
+     */
     public void fillForm(Map<String, String> mapData) {
 
         Set<String> mapKeys = mapData.keySet();
@@ -131,11 +137,15 @@ public class RegisterPage extends BasePage {
         saveButton.click();
     }
 
-    public String getCelVacioMenssage() {
-        drivenFacade.waitVisible(voidCellphoneMenssage);
-        return voidCellphoneMenssage.getText();
+    public String getVoidCellphoneMessage() {
+        drivenFacade.waitVisible(voidCellphoneMessage);
+        return voidCellphoneMessage.getText();
     }
 
+    /**
+     * Choose the gender in the register form
+     * @param gender the gender that will be select
+     */
     private void selectGender(String gender) {
         if (gender != null && !gender.equals("")) {
             if (gender.equals("Female")) {

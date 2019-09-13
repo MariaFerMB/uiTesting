@@ -15,10 +15,10 @@ public class DriverFactory {
 
     private static WebDriver driver;
 
-    private static Properties readConfiguration(String filePath) {
+    private static Properties readConfiguration() {
         Properties prop = new Properties();
         try {
-            InputStream fileInput = new FileInputStream(filePath);
+            InputStream fileInput = new FileInputStream(DRIVER_PROPERTIES);
             prop = new Properties();
             prop.load(fileInput);
             fileInput.close();
@@ -28,12 +28,17 @@ public class DriverFactory {
         return prop;
     }
 
+    /**
+     * Create and return a specific web driver.
+     * If is necesary create  the web driver, the method read a property to define what type
+     * @return A specific web driver
+     */
     public static WebDriver getDriver() {
         if (driver == null) {
-            Properties prop = readConfiguration(DRIVER_PROPERTIES);
+            Properties prop = readConfiguration();
             String driverName = prop.getProperty("driver");
 
-            if (driverName.equals("Chrome")) {//enum
+            if (driverName.equals("Chrome")) {
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--start-maximized");
                 driver = new ChromeDriver(options);
@@ -43,7 +48,7 @@ public class DriverFactory {
         return driver;
     }
 
-    public static void deleteDriver(){
+    public static void deleteDriver() {
         driver.quit();
         driver = null;
     }

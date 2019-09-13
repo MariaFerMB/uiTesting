@@ -31,14 +31,14 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//*[@id='search-bar']//*[@class='icon-search fb-masthead__util-bar__icon']")
     private WebElement searchIcon;
 
-    private SignInPopUp signInPopUp;
+    private final SignInPopUp signInPopUp;
 
     public HomePage(WebDriver driver) {
         super(driver);
         signInPopUp = new SignInPopUp(driver);
     }
 
-    public void signIn(Map<String,String> singInData) {
+    public void signIn(Map<String, String> singInData) {
         openSingInPopUp();
         signInPopUp.signIn(singInData);
     }
@@ -68,12 +68,19 @@ public class HomePage extends BasePage {
         return signInPopUp.getErrorMessage();
     }
 
+    /**
+     * Sing out of a user account
+     */
     public void signOut() {
         drivenFacade.waitVisible(signInMessage);
         signInMessage.click();
         signOutButton.click();
     }
 
+    /**
+     * Search a word or phrase using the search bar
+     * @param search String with word or phrase that will be search
+     */
     public void search(String search) {
         searchBar.sendKeys(search);
         searchIcon.click();

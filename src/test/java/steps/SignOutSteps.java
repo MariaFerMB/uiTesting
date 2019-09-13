@@ -14,7 +14,6 @@ public class SignOutSteps {
 
 
     public SignOutSteps() {
-
         homePage = new HomePage(DriverFactory.getDriver());
     }
 

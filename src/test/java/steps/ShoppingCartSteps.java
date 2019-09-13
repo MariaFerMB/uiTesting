@@ -15,17 +15,12 @@ import static org.hamcrest.core.IsEqual.equalTo;
 
 public class ShoppingCartSteps {
 
-    private static final String SPECIFIC_PRODUCT_URL = "https://www.falabella.com.co/falabella-co/category/cat910963/Celulares-y-Telefonos?isPLP=1";
-    private static final String SHOPPING_CART_URL = "https://www.falabella.com.co/falabella-co/basket";
-
-    private DriverFacade drivenHelper;
     private ProductsPage productsPage;
     private ProductPage productPage;
     private ShoppingCartPage shoppingCartPage;
 
 
     public ShoppingCartSteps() {
-        drivenHelper = new DriverFacade(DriverFactory.getDriver());
         productsPage = new ProductsPage(DriverFactory.getDriver());
         productPage = new ProductPage(DriverFactory.getDriver());
         shoppingCartPage = new ShoppingCartPage(DriverFactory.getDriver());
@@ -33,7 +28,6 @@ public class ShoppingCartSteps {
 
     @Given("I am in a product page")
     public void iAmInAProductPage() {
-        drivenHelper.openPage(SPECIFIC_PRODUCT_URL);
         productsPage.openProduct();
     }
 
@@ -49,7 +43,7 @@ public class ShoppingCartSteps {
 
     @And("I go to the shopping cart page")
     public void iHaveAProductInMyShoppingCart() {
-        drivenHelper.openPage(SHOPPING_CART_URL);
+        shoppingCartPage.openPage();
     }
 
     @And("I delete the product")

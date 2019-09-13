@@ -30,9 +30,13 @@ public class SignInPopUp extends PageObject {
     }
 
 
-    public void signIn(Map<String,String> signInData) {
-        emailCamp.sendKeys(signInData.get("Email"));
-        passwordCamp.sendKeys(signInData.get("Password"));
+    /**
+     * Do sign in with credentials
+     * @param signInData A map with the email and password
+     */
+    public void signIn(Map<String, String> signInData) {
+        sendKeys(emailCamp, signInData.get("Email"));
+        sendKeys(passwordCamp, signInData.get("Password"));
         signInButton.click();
     }
 
@@ -41,6 +45,9 @@ public class SignInPopUp extends PageObject {
         return errorMessage.getText();
     }
 
+    /**
+     * Click in register button to open the form
+     */
     public void openRegister() {
         registerLink.click();
     }

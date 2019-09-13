@@ -41,6 +41,6 @@ public class RegisterSteps {
 
     @Then("I should see a error message: ([^\"]*)")
     public void iShouldSeeAErrorMessage(String errorMessage) {
-        assertThat(registerPage.getCelVacioMenssage(), equalTo(errorMessage));
+        assertThat(registerPage.getVoidCellphoneMessage(), equalTo(errorMessage));
     }
 }

@@ -19,7 +19,7 @@ public class SignInSteps {
     }
 
     @When("I sign in with the next credentials$")
-    public void singInWithCredentials(Map<String,String> data) {
+    public void singInWithCredentials(Map<String, String> data) {
         homePage.signIn(data);
     }
 
